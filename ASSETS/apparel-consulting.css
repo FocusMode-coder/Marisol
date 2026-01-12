@@ -1,0 +1,7 @@
+:root{--cream:#fbf4ef;--cream2:#fffaf7;--ink:#1f1f1f;--muted:#5a5a5a;--gold:#c9a06a;--stroke:rgba(201,160,106,.22);--card:rgba(255,255,255,.80);--shadow:0 18px 40px rgba(22,16,10,.08);}
+.page-apparel-consulting{background:radial-gradient(1200px 600px at 50% 0%,var(--cream2),var(--cream));color:var(--ink);}
+.page-apparel-consulting h1,.page-apparel-consulting .page-title{font-size:clamp(34px,4vw,56px);letter-spacing:-.02em;}
+.page-apparel-consulting p,.page-apparel-consulting .subtitle{color:var(--muted);}
+.page-apparel-consulting .card,.page-apparel-consulting .service-card,.page-apparel-consulting .feature-card{
+  background:var(--card);border:1px solid var(--stroke);border-radius:18px;box-shadow:var(--shadow);
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collab Inquiries — Marisol</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ASSETS/styles/site.css">
+</head>
+<body class="page page-collab">
+    <nav class="marisol-navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="page">
+        <div class="container">
+            <h1 class="page-title">Brand Ambassador & Influencer Collaborations</h1>
+            <p class="page-subtitle">Let's partner to elevate brand visibility with aligned feminine luxury storytelling</p>
+
+            <div class="section">
+                <div class="text-content">
+                    <p>Partner with Marisol to bring your brand into a space of authentic feminine luxury. Whether you're seeking curated photo content, dynamic video storytelling, or runway-style presentations, each collaboration is designed to reflect elegance, intentionality, and aligned brand values. Let's co-create content that resonates with your audience and elevates your brand's presence.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Collaboration Packages</h2>
+                <p class="section-subtitle">Select the package that aligns with your vision</p>
+
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">2 Photos</h3>
+                        </div>
+                        <p class="card-description">Two high-quality, professionally styled photos featuring your product or brand. Perfect for social media campaigns and targeted marketing.</p>
+                        <button class="btn btn-secondary btn-full" onclick="selectPackage('2 Photos')" style="margin-top: 1.5rem;">Select Package</button>
+                    </div>
+
+                    <div class="card">
+                        <span class="badge badge-popular" style="margin-bottom: 1rem;">Most Popular</span>
+                        <div class="card-header">
+                            <h3 class="card-title">4 Photos & 1 Video</h3>
+                        </div>
+                        <p class="card-description">Four curated photos plus one short-form video (15-30 seconds) showcasing your brand in motion. Ideal for comprehensive social media presence.</p>
+                        <button class="btn btn-full" onclick="selectPackage('4 Photos & 1 Video')" style="margin-top: 1.5rem;">Select Package</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Runway</h3>
+                        </div>
+                        <p class="card-description">Premium runway-style presentation with cinematic video and editorial photography. Designed for high-impact brand launches and luxury campaigns.</p>
+                        <button class="btn btn-secondary btn-full" onclick="selectPackage('Runway')" style="margin-top: 1.5rem;">Select Package</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Collaboration Showcase</h2>
+                <p class="section-subtitle">A glimpse into past partnerships</p>
+
+                <div class="img-gallery">
+                    <div style="background: linear-gradient(135deg, #f5f5f5, #fafafa); border-radius: 12px; display: flex; align-items: center; justify-content: center; height: 280px; border: 1px solid rgba(218, 165, 152, 0.2);">
+                        <span style="font-size: 3rem; opacity: 0.3;">📸</span>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #f5f5f5, #fafafa); border-radius: 12px; display: flex; align-items: center; justify-content: center; height: 280px; border: 1px solid rgba(218, 165, 152, 0.2);">
+                        <span style="font-size: 3rem; opacity: 0.3;">📸</span>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #f5f5f5, #fafafa); border-radius: 12px; display: flex; align-items: center; justify-content: center; height: 280px; border: 1px solid rgba(218, 165, 152, 0.2);">
+                        <span style="font-size: 3rem; opacity: 0.3;">📸</span>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #f5f5f5, #fafafa); border-radius: 12px; display: flex; align-items: center; justify-content: center; height: 280px; border: 1px solid rgba(218, 165, 152, 0.2);">
+                        <span style="font-size: 3rem; opacity: 0.3;">📸</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Start Your Collaboration</h2>
+                <p class="section-subtitle">Fill out the form below and we'll be in touch within 48 hours</p>
+
+                <div class="card">
+                    <form class="form-grid" id="collabForm">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="brandName" class="form-label">Brand/Company Name</label>
+                            <input type="text" id="brandName" name="brandName" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="package" class="form-label">Selected Package</label>
+                            <select id="package" name="package" class="form-select" required>
+                                <option value="">Select a package...</option>
+                                <option value="2-photos">2 Photos</option>
+                                <option value="4-photos-video">4 Photos & 1 Video</option>
+                                <option value="runway">Runway</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Tell us about your vision</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Describe your brand, campaign goals, and collaboration vision..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-full">Submit Inquiry</button>
+                    </form>
+
+                    <div class="notice notice-success" id="collabSuccess" style="display: none; margin-top: 2rem;">
+                        <strong>Thank You for Your Inquiry!</strong><br>
+                        We've received your collaboration request and will respond within 48 hours. We're excited to explore this partnership with you!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="blogs.html" class="footer-link">Blogs</a>
+            </nav>
+            <p class="footer-copyright">© Marisol — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        function selectPackage(packageName) {
+            const selectElement = document.getElementById('package');
+            const formSection = document.querySelector('.card');
+            
+            const packageMap = {
+                '2 Photos': '2-photos',
+                '4 Photos & 1 Video': '4-photos-video',
+                'Runway': 'runway'
+            };
+            
+            selectElement.value = packageMap[packageName];
+            formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            selectElement.style.borderColor = '#d4a574';
+            setTimeout(() => {
+                selectElement.style.borderColor = '';
+            }, 2000);
+        }
+
+        document.getElementById('collabForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            document.getElementById('collabForm').style.display = 'none';
+            document.getElementById('collabSuccess').style.display = 'block';
+            
+            document.getElementById('collabSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            setTimeout(() => {
+                this.reset();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

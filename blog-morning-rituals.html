@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Rituals for a Radiant Day | Marisol Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ASSETS/styles/site.css">
+    <link rel="stylesheet" href="ASSETS/blog-post.css">
+    <style>
+        /* ========================================
+           SCOPED STYLES FOR BLOG-MORNING-RITUALS PAGE ONLY
+           ======================================== */
+        
+        /* Page background */
+        .page-blog-morning {
+            background: linear-gradient(180deg, #fffaf7 0%, #fbf4ef 100%);
+            min-height: 100vh;
+        }
+        
+        /* Hide the placeholder text */
+        .blog-post-hero span {
+            display: none;
+        }
+        
+        /* CSS-only Hero Banner */
+        .page-blog-morning .blog-post-hero {
+            background: linear-gradient(135deg, #f5ede4 0%, #f9f1e8 50%, #f5e8dc 100%);
+            height: 240px;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-blog-morning .blog-post-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(218, 165, 152, 0.06) 0%, transparent 50%);
+        }
+        
+        /* Content Container */
+        .page-blog-morning .blog-post-content {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .page-blog-morning .blog-post-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Article Card */
+        .page-blog-morning .blog-article {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 56px 64px;
+            margin-top: -80px;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            position: relative;
+            border: 1px solid rgba(218, 165, 152, 0.12);
+        }
+        
+        /* Back to Blogs Link */
+        .page-blog-morning .back-to-blogs {
+            display: inline-block;
+            color: #d4a574;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .page-blog-morning .back-to-blogs:hover {
+            color: #c49463;
+            text-decoration: underline;
+        }
+        
+        /* Category Badge/Pill */
+        .page-blog-morning .post-category {
+            display: inline-block;
+            background: rgba(212, 165, 116, 0.12);
+            color: #c49463;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+        }
+        
+        /* Title */
+        .page-blog-morning .post-title {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: #2a2a2a;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+        
+        /* Post Meta */
+        .page-blog-morning .post-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: #8a8a8a;
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(218, 165, 152, 0.15);
+        }
+        
+        /* Typography System */
+        .page-blog-morning .post-paragraph {
+            color: #5a5a5a;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-blog-morning .post-paragraph strong {
+            color: #2a2a2a;
+            font-weight: 600;
+        }
+        
+        /* Subheadings */
+        .page-blog-morning .post-subheading {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            line-height: 1.3;
+            margin-top: 3rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        /* Quote/Highlight Block */
+        .page-blog-morning .post-highlight {
+            background: linear-gradient(135deg, #faf7f3 0%, #f9f4ef 100%);
+            border-left: 4px solid #d4a574;
+            border-radius: 8px;
+            padding: 1.75rem 2rem;
+            margin: 2.5rem 0;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #2a2a2a;
+            line-height: 1.7;
+        }
+        
+        /* CTA Panel */
+        .page-blog-morning .blog-cta {
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.06), rgba(218, 165, 152, 0.04));
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            margin-top: 3.5rem;
+            text-align: center;
+        }
+        
+        .page-blog-morning .blog-cta h3 {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.65rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 0.75rem;
+        }
+        
+        .page-blog-morning .blog-cta > p {
+            color: #5a5a5a;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        /* CTA Buttons Container */
+        .page-blog-morning .cta-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Button Base Styles */
+        .page-blog-morning .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+        }
+        
+        /* Primary Button (Filled) */
+        .page-blog-morning .btn-primary {
+            background: #d4a574;
+            color: #ffffff;
+            border: 1px solid #d4a574;
+        }
+        
+        .page-blog-morning .btn-primary:hover {
+            background: #c49463;
+            border-color: #c49463;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+        }
+        
+        /* Secondary Button (Outline/Ghost) */
+        .page-blog-morning .btn-secondary {
+            background: transparent;
+            color: #d4a574;
+            border: 1px solid #d4a574;
+        }
+        
+        .page-blog-morning .btn-secondary:hover {
+            background: rgba(212, 165, 116, 0.08);
+            border-color: #c49463;
+            color: #c49463;
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-blog-morning .blog-post-hero {
+                height: 180px;
+            }
+            
+            .page-blog-morning .blog-post-container {
+                padding: 0 1.5rem;
+            }
+            
+            .page-blog-morning .blog-article {
+                padding: 32px 24px;
+                margin-top: -60px;
+                margin-bottom: 3rem;
+            }
+            
+            .page-blog-morning .post-title {
+                font-size: 1.75rem;
+            }
+            
+            .page-blog-morning .post-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .page-blog-morning .post-paragraph {
+                font-size: 1rem;
+            }
+            
+            .page-blog-morning .post-subheading {
+                font-size: 1.5rem;
+                margin-top: 2.5rem;
+            }
+            
+            .page-blog-morning .post-highlight {
+                padding: 1.25rem 1.5rem;
+                font-size: 1.05rem;
+            }
+            
+            .page-blog-morning .blog-cta {
+                padding: 2rem 1.5rem;
+            }
+            
+            .page-blog-morning .blog-cta h3 {
+                font-size: 1.4rem;
+            }
+            
+            .page-blog-morning .cta-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .page-blog-morning .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="page-blog-post">
+    <div class="page-blog-morning">
+        <nav class="marisol-navbar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="blog-post-hero">
+            <span>Article Hero Image</span>
+        </div>
+
+        <section class="blog-post-content">
+            <div class="blog-post-container">
+                <article class="blog-article">
+                    <a href="blogs.html" class="back-to-blogs">← Back to Blogs</a>
+                    
+                    <span class="post-category">Wellness & Energy</span>
+                    
+                    <h1 class="post-title">Morning Rituals for Radiance</h1>
+                    
+                    <div class="post-meta">
+                        <span class="post-date">January 10, 2026</span>
+                        <span class="post-read-time">5 min read</span>
+                    </div>
+
+                    <p class="post-paragraph">
+                        The way you begin your morning sets the tone for your entire day. When you cultivate intentional morning rituals, you're not just going through the motions—you're claiming your power, aligning with your highest self, and creating space for radiance to flow through every cell of your being.
+                    </p>
+
+                    <p class="post-paragraph">
+                        For years, I struggled with chaotic mornings that left me feeling drained before the day even began. But when I committed to a sacred morning practice, everything shifted. My energy expanded, my clarity deepened, and I started showing up as the woman I was meant to be.
+                    </p>
+
+                    <p class="post-highlight">
+                        "Your morning ritual is your daily declaration of self-love. It's the sacred space where you choose yourself first."
+                    </p>
+
+                    <h2 class="post-subheading">The Power of Intentional Mornings</h2>
+
+                    <p class="post-paragraph">
+                        When you wake up and immediately check your phone, scroll social media, or dive into work emails, you're giving away your energy before you've even claimed it for yourself. Instead, what if you began each day by filling your own cup first?
+                    </p>
+
+                    <p class="post-paragraph">
+                        An intentional morning doesn't have to be complicated or time-consuming. Even 15-20 minutes of dedicated self-care can completely transform your energy, mindset, and how you move through your day.
+                    </p>
+
+                    <h2 class="post-subheading">My Radiant Morning Ritual</h2>
+
+                    <p class="post-paragraph">
+                        Here's what my morning practice looks like. Feel free to adapt these elements to create a ritual that feels aligned for you:
+                    </p>
+
+                    <p class="post-paragraph">
+                        <strong>Hydration First:</strong> Before anything else, I drink a full glass of water with lemon. This simple act wakes up my system and signals to my body that we're starting fresh.
+                    </p>
+
+                    <p class="post-paragraph">
+                        <strong>Movement & Breath:</strong> I spend 10 minutes doing gentle stretches or yoga flows. Nothing intense—just reconnecting with my body and letting energy move through me. I focus on deep, intentional breaths that ground me in the present moment.
+                    </p>
+
+                    <p class="post-paragraph">
+                        <strong>Gratitude Practice:</strong> I write down three things I'm grateful for. This shifts my energy from lack to abundance and reminds me of the beauty that already exists in my life.
+                    </p>
+
+                    <p class="post-paragraph">
+                        <strong>Affirmations & Visualization:</strong> I speak affirmations that align with who I'm becoming and visualize my day unfolding with ease and grace. I see myself moving through challenges with confidence and magnetizing the opportunities meant for me.
+                    </p>
+
+                    <p class="post-highlight">
+                        "When you align your morning with your soul's desires, you stop chasing and start receiving."
+                    </p>
+
+                    <h2 class="post-subheading">Creating Your Own Sacred Practice</h2>
+
+                    <p class="post-paragraph">
+                        Your morning ritual should feel nourishing, not like another task on your to-do list. Start small. Choose one or two practices that resonate with you and commit to them for a week. Notice how your energy shifts. Notice how you start to crave that sacred time with yourself.
+                    </p>
+
+                    <p class="post-paragraph">
+                        Remember, this isn't about perfection. Some mornings will flow beautifully, and others might feel rushed or incomplete. What matters is the intention—the commitment to choosing yourself, even if just for a few precious minutes.
+                    </p>
+
+                    <p class="post-paragraph">
+                        As you cultivate this practice, you'll begin to notice something magical: the radiance you're seeking isn't something you have to chase or create. It's already within you, waiting to be revealed through the simple act of showing up for yourself each morning.
+                    </p>
+
+                    <p class="post-paragraph">
+                        Your mornings are sacred. They're not just the start of your day—they're the foundation for how you show up in your life. Choose rituals that honor you, and watch how everything else shifts.
+                    </p>
+
+                    <section class="blog-cta" aria-label="Call to action">
+                        <h3>Ready for your next step?</h3>
+                        <p>Stay connected and explore what's next—support, rituals, and offerings.</p>
+                        <div class="cta-actions">
+                            <a class="btn btn-secondary" href="subscribe.html">Subscribe for Updates</a>
+                            <a class="btn btn-secondary" href="blogs.html">Explore Signature Pathways</a>
+                            <a class="btn btn-primary" href="products.html">Visit the Shop</a>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <nav class="footer-nav">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="contact.html" class="footer-link">Contact</a></a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="blogs.html" class="footer-link">Blogs</a>
+                </nav>
+                <p class="footer-copyright">© Marisol — All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

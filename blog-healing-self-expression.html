@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Through Self-Expression | Marisol Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ASSETS/styles/site.css">
+    <link rel="stylesheet" href="ASSETS/blog-post.css">
+    <style>
+        /* ========================================
+           SCOPED STYLES FOR BLOG-HEALING-SELF-EXPRESSION PAGE ONLY
+           ======================================== */
+        
+        /* Page wrapper with unique class */
+        .page-blog-healing {
+            background: linear-gradient(180deg, #fffaf7 0%, #fbf4ef 100%);
+            min-height: 100vh;
+        }
+        
+        /* Hide the placeholder text */
+        .page-blog-healing .blog-post-hero span {
+            display: none;
+        }
+        
+        /* CSS-only Hero Banner */
+        .page-blog-healing .blog-post-hero {
+            background: linear-gradient(135deg, #f5ede4 0%, #f9f1e8 50%, #f5e8dc 100%);
+            height: 240px;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-blog-healing .blog-post-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(218, 165, 152, 0.06) 0%, transparent 50%);
+        }
+        
+        /* Content Container */
+        .page-blog-healing .blog-post-content {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .page-blog-healing .blog-post-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Article Card */
+        .page-blog-healing .blog-post-container {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 56px 64px;
+            margin-top: -80px;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            position: relative;
+            border: 1px solid rgba(218, 165, 152, 0.12);
+            max-width: 860px;
+        }
+        
+        /* Back to Blogs Link */
+        .page-blog-healing .back-to-blogs {
+            display: inline-block;
+            color: #d4a574;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .page-blog-healing .back-to-blogs:hover {
+            color: #c49463;
+            text-decoration: underline;
+        }
+        
+        /* Category Badge/Pill */
+        .page-blog-healing .post-category {
+            display: inline-block;
+            background: rgba(212, 165, 116, 0.12);
+            color: #c49463;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+        }
+        
+        /* Title */
+        .page-blog-healing .post-title {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: #2a2a2a;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+        
+        /* Post Meta */
+        .page-blog-healing .post-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: #8a8a8a;
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(218, 165, 152, 0.15);
+        }
+        
+        /* Typography System */
+        .page-blog-healing .post-paragraph {
+            color: #5a5a5a;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-blog-healing .post-paragraph strong {
+            color: #2a2a2a;
+            font-weight: 600;
+        }
+        
+        /* Subheadings */
+        .page-blog-healing .post-subheading {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            line-height: 1.3;
+            margin-top: 3rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        /* Quote/Highlight Block */
+        .page-blog-healing .post-highlight {
+            background: linear-gradient(135deg, #faf7f3 0%, #f9f4ef 100%);
+            border-left: 4px solid #d4a574;
+            border-radius: 8px;
+            padding: 1.75rem 2rem;
+            margin: 2.5rem 0;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #2a2a2a;
+            line-height: 1.7;
+        }
+        
+        /* CTA Panel */
+        .page-blog-healing .blog-cta {
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.06), rgba(218, 165, 152, 0.04));
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            margin-top: 3.5rem;
+            text-align: center;
+        }
+        
+        .page-blog-healing .blog-cta h3 {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.65rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 0.75rem;
+        }
+        
+        .page-blog-healing .blog-cta > p {
+            color: #5a5a5a;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        /* CTA Buttons Container */
+        .page-blog-healing .cta-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Button Base Styles */
+        .page-blog-healing .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+        }
+        
+        /* Primary Button (Filled) */
+        .page-blog-healing .btn-primary {
+            background: #d4a574;
+            color: #ffffff;
+            border: 1px solid #d4a574;
+        }
+        
+        .page-blog-healing .btn-primary:hover {
+            background: #c49463;
+            border-color: #c49463;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+        }
+        
+        /* Secondary Button (Outline/Ghost) */
+        .page-blog-healing .btn-secondary {
+            background: transparent;
+            color: #d4a574;
+            border: 1px solid #d4a574;
+        }
+        
+        .page-blog-healing .btn-secondary:hover {
+            background: rgba(212, 165, 116, 0.08);
+            border-color: #c49463;
+            color: #c49463;
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-blog-healing .blog-post-hero {
+                height: 180px;
+            }
+            
+            .page-blog-healing .blog-post-container {
+                padding: 32px 24px;
+                margin-top: -60px;
+                margin-bottom: 3rem;
+            }
+            
+            .page-blog-healing .post-title {
+                font-size: 1.75rem;
+            }
+            
+            .page-blog-healing .post-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .page-blog-healing .post-paragraph {
+                font-size: 1rem;
+            }
+            
+            .page-blog-healing .post-subheading {
+                font-size: 1.5rem;
+                margin-top: 2.5rem;
+            }
+            
+            .page-blog-healing .post-highlight {
+                padding: 1.25rem 1.5rem;
+                font-size: 1.05rem;
+            }
+            
+            .page-blog-healing .blog-cta {
+                padding: 2rem 1.5rem;
+            }
+            
+            .page-blog-healing .blog-cta h3 {
+                font-size: 1.4rem;
+            }
+            
+            .page-blog-healing .cta-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .page-blog-healing .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="page-blog-healing">
+    <nav class="marisol-navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="blog-post-hero"></div>
+
+    <section class="blog-post-content">
+        <div class="blog-post-container">
+            <a href="blogs.html" class="back-to-blogs">← Back to Blogs</a>
+            
+            <span class="post-category">Divine Feminine & Healing</span>
+            
+            <h1 class="post-title">Healing Through Self-Expression</h1>
+            
+            <div class="post-meta">
+                <span class="post-date">January 8, 2026</span>
+                <span class="post-read-time">6 min read</span>
+            </div>
+
+            <p class="post-paragraph">
+                For so long, I kept my truth locked inside. I wore masks, played it safe, and dimmed my light to fit into spaces that were never meant for me. But the more I suppressed my authentic self, the heavier I felt—emotionally, energetically, and even physically.
+            </p>
+
+            <p class="post-paragraph">
+                It wasn't until I gave myself permission to express fully—through fashion, creativity, my voice, and my choices—that I began to heal. Self-expression became my medicine, my liberation, and my pathway home to myself.
+            </p>
+
+            <p class="post-highlight">
+                "When you honor your truth and express it boldly, you free yourself from the chains of who you thought you had to be."
+            </p>
+
+            <h2 class="post-subheading">The Prison of Silence</h2>
+
+            <p class="post-paragraph">
+                Many of us were taught to stay small. To not be "too much" or "too loud." To fit in rather than stand out. We learned that safety meant blending in, that acceptance required us to suppress parts of ourselves.
+            </p>
+
+            <p class="post-paragraph">
+                But here's what no one tells you: every time you silence your truth, you create a wound. Every time you hide your authentic self, you disconnect from your power. The pain of not being seen for who you really are runs deep—and it manifests in anxiety, depression, burnout, and a feeling of being lost.
+            </p>
+
+            <h2 class="post-subheading">Fashion as Healing</h2>
+
+            <p class="post-paragraph">
+                One of my first acts of self-expression was through fashion. I stopped dressing for others' approval and started choosing pieces that made me feel powerful, radiant, and aligned. When I put on an outfit that reflected my inner goddess, something shifted. I walked taller. I spoke with more confidence. I owned my space.
+            </p>
+
+            <p class="post-paragraph">
+                Fashion isn't superficial—it's a form of storytelling. Every outfit is a declaration of who you are and how you want to move through the world. When you dress in alignment with your authentic self, you're not just wearing clothes. You're wearing your truth.
+            </p>
+
+            <p class="post-highlight">
+                "Your style is your signature. It's how you communicate your essence before you even speak."
+            </p>
+
+            <h2 class="post-subheading">Creative Expression as Medicine</h2>
+
+            <p class="post-paragraph">
+                Beyond fashion, I found healing through other forms of creative expression—writing, art, movement, even the way I designed my space. Each act of creation became a way to process emotions, release what no longer served me, and reclaim parts of myself I had abandoned.
+            </p>
+
+            <p class="post-paragraph">
+                You don't have to be an "artist" to use creativity as a healing tool. Simply allowing yourself to create without judgment—whether it's journaling, dancing in your living room, or rearranging your home—can unlock profound emotional release and clarity.
+            </p>
+
+            <h2 class="post-subheading">Speaking Your Truth</h2>
+
+            <p class="post-paragraph">
+                Self-expression isn't just about what you wear or create—it's also about what you say and how you show up. It's about setting boundaries, saying no to what drains you, and saying yes to what lights you up. It's about sharing your story, even when your voice shakes.
+            </p>
+
+            <p class="post-paragraph">
+                When you speak your truth, you give others permission to do the same. Your authenticity creates a ripple effect that inspires healing not just in you, but in everyone around you.
+            </p>
+
+            <p class="post-paragraph">
+                Today, I invite you to ask yourself: Where am I hiding? Where am I playing small? What part of me is longing to be expressed?
+            </p>
+
+            <p class="post-paragraph">
+                Your healing begins the moment you choose to show up as your full, unapologetic self. The world needs your unique expression. Don't keep it locked inside any longer.
+            </p>
+
+            <p class="post-paragraph">
+                When you heal through self-expression, you don't just release the pain—you reclaim the parts of yourself that were silenced, shamed, or suppressed. And in that reclamation, you step into a version of yourself that is more whole, more powerful, and more radiant than ever before.
+            </p>
+
+            <p class="post-paragraph">
+                Your authentic expression isn't something you need to discover or create. It's already within you, waiting to be revealed through the simple act of allowing yourself to be seen. The world doesn't need another perfect performance—it needs your truth.
+            </p>
+
+            <section class="blog-cta" aria-label="Call to action">
+                <h3>Ready for your next step?</h3>
+                <p>Stay connected and explore what's next—support, rituals, and offerings.</p>
+                <div class="cta-actions">
+                    <a class="btn btn-secondary" href="subscribe.html">Subscribe for Updates</a>
+                    <a class="btn btn-secondary" href="blogs.html">Explore Signature Pathways</a>
+                    <a class="btn btn-primary" href="products.html">Visit the Shop</a>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="blogs.html" class="footer-link">Blogs</a>
+            </nav>
+            <p class="footer-copyright">© Marisol — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

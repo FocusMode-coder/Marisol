@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design to Delivery — Marisol</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ASSETS/styles/site.css">
+    <link rel="stylesheet" href="ASSETS/apparel-consulting.css">
+    <style>
+        /* ========================================
+           SCOPED STYLES FOR APPAREL-CONSULTING PAGE ONLY
+           ======================================== */
+        
+        .page-apparel-consulting {
+            background: linear-gradient(180deg, #fffaf7 0%, #fbf4ef 100%);
+            min-height: 100vh;
+        }
+        
+        .page-apparel-consulting .page {
+            padding: 6rem 0 4rem;
+        }
+        
+        .page-apparel-consulting .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .page-apparel-consulting .page-title {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: #2a2a2a;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .page-apparel-consulting .page-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4a574, #daa598);
+            margin: 1.5rem auto 0;
+            border-radius: 2px;
+        }
+        
+        .page-apparel-consulting .page-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            color: #5a5a5a;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .page-apparel-consulting .text-content {
+            max-width: 820px;
+            margin: 0 auto 3rem;
+        }
+        
+        .page-apparel-consulting .text-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #5a5a5a;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .page-apparel-consulting .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+        
+        .page-apparel-consulting .btn-cta {
+            display: inline-block;
+            padding: 0.95rem 2rem;
+            border-radius: 8px;
+            font-size: 0.975rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .page-apparel-consulting .btn-cta-primary {
+            background: #d4a574;
+            color: #ffffff;
+            border: 1px solid #d4a574;
+        }
+        
+        .page-apparel-consulting .btn-cta-primary:hover {
+            background: #c49463;
+            border-color: #c49463;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+        }
+        
+        .page-apparel-consulting .btn-cta-secondary {
+            background: transparent;
+            color: #d4a574;
+            border: 1px solid #d4a574;
+        }
+        
+        .page-apparel-consulting .btn-cta-secondary:hover {
+            background: rgba(212, 165, 116, 0.08);
+            border-color: #c49463;
+            color: #c49463;
+            transform: translateY(-2px);
+        }
+        
+        .page-apparel-consulting .section {
+            margin-bottom: 5rem;
+        }
+        
+        .page-apparel-consulting .section-title {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: clamp(1.75rem, 3vw, 2.25rem);
+            font-weight: 400;
+            color: #2a2a2a;
+            line-height: 1.3;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        
+        .page-apparel-consulting .section-subtitle {
+            font-size: 1.05rem;
+            color: #5a5a5a;
+            line-height: 1.7;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .page-apparel-consulting .grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .page-apparel-consulting .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        
+        .page-apparel-consulting .card {
+            background: #ffffff;
+            border: 1px solid rgba(218, 165, 152, 0.15);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .page-apparel-consulting .grid .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(212, 165, 116, 0.12);
+            border-color: rgba(218, 165, 152, 0.25);
+        }
+        
+        .page-apparel-consulting .card-header {
+            margin-bottom: 1rem;
+        }
+        
+        .page-apparel-consulting .card-title {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            line-height: 1.3;
+            margin-bottom: 0;
+        }
+        
+        .page-apparel-consulting .card-description {
+            color: #5a5a5a;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .page-apparel-consulting .card-link {
+            color: #d4a574;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        
+        .page-apparel-consulting .card-link:hover {
+            color: #c49463;
+            text-decoration: underline;
+        }
+        
+        .page-apparel-consulting .card-link::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+        
+        .page-apparel-consulting .card-link:hover::after {
+            transform: translateX(3px);
+        }
+        
+        .page-apparel-consulting .section .card:not(.grid .card) {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 3rem 3rem 2.5rem;
+        }
+        
+        .page-apparel-consulting .form-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+        
+        .page-apparel-consulting .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .page-apparel-consulting .form-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a2a2a;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.02em;
+        }
+        
+        .page-apparel-consulting .form-input,
+        .page-apparel-consulting .form-select,
+        .page-apparel-consulting .form-textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid rgba(218, 165, 152, 0.2);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            color: #2a2a2a;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
+        
+        .page-apparel-consulting .form-input:focus,
+        .page-apparel-consulting .form-select:focus,
+        .page-apparel-consulting .form-textarea:focus {
+            outline: none;
+            border-color: #d4a574;
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+        }
+        
+        .page-apparel-consulting .form-textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+        
+        .page-apparel-consulting .file-upload-wrapper {
+            position: relative;
+            display: block;
+        }
+        
+        .page-apparel-consulting .form-input[type="file"] {
+            padding: 1.25rem 1rem;
+            background: #fafafa;
+            border: 2px dashed rgba(218, 165, 152, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .page-apparel-consulting .form-input[type="file"]:hover {
+            background: #ffffff;
+            border-color: rgba(218, 165, 152, 0.5);
+        }
+        
+        .page-apparel-consulting .form-input[type="file"]::file-selector-button {
+            padding: 0.5rem 1rem;
+            margin-right: 1rem;
+            background: #d4a574;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .page-apparel-consulting .form-input[type="file"]::file-selector-button:hover {
+            background: #c49463;
+        }
+        
+        .page-apparel-consulting .file-upload-helper {
+            display: block;
+            margin-top: 0.5rem;
+            color: #8a8a8a;
+            font-size: 0.875rem;
+        }
+        
+        .page-apparel-consulting .btn-full {
+            width: 100%;
+            max-width: 320px;
+            margin: 1.5rem auto 0;
+            padding: 1rem 2rem;
+            background: #d4a574;
+            color: #ffffff;
+            border: 1px solid #d4a574;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .page-apparel-consulting .btn-full:hover {
+            background: #c49463;
+            border-color: #c49463;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+        }
+        
+        .page-apparel-consulting .form-helper {
+            text-align: center;
+            color: #8a8a8a;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+        
+        .page-apparel-consulting .notice-success {
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.08), rgba(218, 165, 152, 0.06));
+            border: 1px solid rgba(212, 165, 116, 0.25);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .page-apparel-consulting .notice-success strong {
+            color: #2a2a2a;
+            font-size: 1.15rem;
+        }
+        
+        @media (max-width: 768px) {
+            .page-apparel-consulting .page {
+                padding: 5rem 0 3rem;
+            }
+            
+            .page-apparel-consulting .container {
+                padding: 0 1.5rem;
+            }
+            
+            .page-apparel-consulting .page-title {
+                font-size: 2rem;
+            }
+            
+            .page-apparel-consulting .page-subtitle {
+                font-size: 1.05rem;
+            }
+            
+            .page-apparel-consulting .hero-cta-group {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .page-apparel-consulting .btn-cta {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .page-apparel-consulting .section {
+                margin-bottom: 3.5rem;
+            }
+            
+            .page-apparel-consulting .section-title {
+                font-size: 1.65rem;
+            }
+            
+            .page-apparel-consulting .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-apparel-consulting .section .card:not(.grid .card) {
+                padding: 2rem 1.5rem;
+            }
+            
+            .page-apparel-consulting .form-grid > div[style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .page-apparel-consulting .btn-full {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="page page-apparel page-apparel-consulting">
+    <div class="page-apparel-consulting">
+        <nav class="marisol-navbar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <main class="page">
+            <div class="container">
+                <h1 class="page-title">Design to Delivery</h1>
+                <p class="page-subtitle">Expert design, sourcing, and creative direction for brands and visionaries</p>
+
+                <div class="section">
+                    <div class="text-content">
+                        <p>Transform your apparel vision into reality with professional consulting services. Whether you're launching a new fashion line, sourcing quality materials, or need creative direction for your brand, we provide comprehensive support tailored to your unique needs.</p>
+                        
+                        <div class="hero-cta-group">
+                            <a href="#inquiry" class="btn-cta btn-cta-primary">Book a Consultation</a>
+                            <a href="#services" class="btn-cta btn-cta-secondary">View Services</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id="services">
+                    <h2 class="section-title">Services Offered</h2>
+                    
+                    <div class="grid grid-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Apparel Consulting</h3>
+                            </div>
+                            <p class="card-description">Strategic guidance on collection development, production planning, and market positioning for fashion brands.</p>
+                            <a href="#inquiry" class="card-link">Learn more</a>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Fashion Design</h3>
+                            </div>
+                            <p class="card-description">Custom fashion design services including sketches, tech packs, and garment development from concept to completion.</p>
+                            <a href="#inquiry" class="card-link">Learn more</a>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Graphic Design</h3>
+                            </div>
+                            <p class="card-description">Visual branding and graphics for apparel, including logos, prints, embroidery designs, and packaging concepts.</p>
+                            <a href="#inquiry" class="card-link">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id="inquiry">
+                    <h2 class="section-title">Submit Service Inquiry</h2>
+                    <p class="section-subtitle">Let's discuss how we can bring your apparel vision to life</p>
+
+                    <div class="card">
+                        <form class="form-grid" id="apparelForm">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="serviceType" class="form-label">Type of Service</label>
+                                <select id="serviceType" name="serviceType" class="form-select" required>
+                                    <option value="">Select a service...</option>
+                                    <option value="apparel-consulting">Apparel Consulting</option>
+                                    <option value="fashion-design">Fashion Design</option>
+                                    <option value="graphic-design">Graphic Design</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inquiryDetails" class="form-label">Inquiry Details</label>
+                                <textarea id="inquiryDetails" name="inquiryDetails" class="form-textarea" rows="6" placeholder="Tell us about your project, timeline, budget, and any specific requirements..." required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fileUpload" class="form-label">Attach Files (Optional)</label>
+                                <div class="file-upload-wrapper">
+                                    <input type="file" id="fileUpload" name="fileUpload" class="form-input" multiple>
+                                    <small class="file-upload-helper">Attach any relevant files, sketches, or inspiration images</small>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-full">Submit Inquiry</button>
+                            <p class="form-helper">We reply within 24–48 hours.</p>
+                        </form>
+
+                        <div class="notice notice-success" id="apparelSuccess" style="display: none; margin-top: 2rem;">
+                            <strong>Thank You for Your Inquiry!</strong><br>
+                            We've received your service request and will respond within 48 hours to discuss your project in detail.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <nav class="footer-nav">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="blogs.html" class="footer-link">Blogs</a>
+                </nav>
+                <p class="footer-copyright">© Marisol — All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        document.getElementById('apparelForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            document.getElementById('apparelForm').style.display = 'none';
+            document.getElementById('apparelSuccess').style.display = 'block';
+            
+            document.getElementById('apparelSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            setTimeout(() => {
+                this.reset();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

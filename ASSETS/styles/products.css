@@ -1,0 +1,88 @@
+/* ========================================
+   PRODUCTS PAGE STYLES - SCOPED TO .page-products
+   ======================================== */
+
+/* All product styles scoped to products page only */
+.page-products #products-page .shop-header {
+    background: var(--color-bg);
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.page-products #products-page .shop-title {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.page-products #products-page .shop-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    font-style: italic;
+}
+
+.page-products #products-page .shop-section {
+    background: var(--color-bg-alt);
+    padding: 4rem 2rem;
+}
+
+.page-products #products-page .shop-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* Product images - NEW: web-safe implementation */
+.page-products .product-media {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, 
+        rgba(232, 218, 218, 0.05) 0%, 
+        rgba(218, 165, 152, 0.03) 50%, 
+        rgba(232, 218, 218, 0.05) 100%
+    );
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    min-height: 320px;
+}
+
+.page-products .product-image {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-products #products-page .shop-title {
+        font-size: 2.25rem;
+    }
+    
+    .page-products .product-media {
+        min-height: 240px;
+        padding: 1rem;
+    }
+    
+    .page-products .product-image {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-products #products-page .shop-title {
+        font-size: 1.85rem;
+    }
+    
+    .page-products .product-media {
+        min-height: 200px;
+    }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Goddess Collection — Marisol</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ASSETS/styles/site.css">
+    <link rel="stylesheet" href="ASSETS/goddess-collection.css">
+</head>
+<body class="page page-collection page-goddess-collection">
+    <nav class="marisol-navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="page-header-title">The Goddess Collection</h1>
+        <p class="page-header-subtitle">Custom gowns and feminine design made for unforgettable moments</p>
+    </header>
+
+    <section class="page-content">
+        <div class="page-content-container">
+            <form class="premium-form" id="goddessForm">
+                <h2 class="form-title">Submit Service Inquiry</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" class="form-label">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName" class="form-label">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceType" class="form-label">Type of Service *</label>
+                    <select id="serviceType" name="serviceType" class="form-input form-select" required>
+                        <option value="">Select a service...</option>
+                        <option value="special-occasion">Special Occasion Gowns</option>
+                        <option value="wedding-gowns">Wedding Gowns</option>
+                        <option value="other-fashion">Other Type of Fashion Design</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="inquiryDetails" class="form-label">Inquiry Details *</label>
+                    <textarea id="inquiryDetails" name="inquiryDetails" class="form-input form-textarea" rows="6" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="fileUpload" class="form-label">Attach Files</label>
+                    <input type="file" id="fileUpload" name="fileUpload" class="form-input form-file" multiple>
+                    <span class="form-help">Optional: Attach any relevant files or images</span>
+                </div>
+
+                <button type="submit" class="form-submit-btn">Submit Inquiry</button>
+            </form>
+
+            <div class="form-success-message thank-you" id="goddessSuccess" aria-live="polite">
+                <div class="success-content">
+                    <span class="success-icon">✓</span>
+                    <h3>Thank you, your inquiry was received.</h3>
+                    <p>We'll get back to you shortly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="blogs.html" class="footer-link">Blogs</a>
+            </nav>
+            <p class="footer-copyright">© Marisol — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('goddessForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            document.getElementById('goddessForm').style.display = 'none';
+            document.getElementById('goddessSuccess').style.display = 'flex';
+            
+            // Scroll to success message
+            document.getElementById('goddessSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Optional: Reset form after delay
+            setTimeout(() => {
+                this.reset();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

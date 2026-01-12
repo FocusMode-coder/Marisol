@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Manifest Your Dream Life | Marisol Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ASSETS/styles/site.css">
+    <link rel="stylesheet" href="ASSETS/blog-post.css">
+    <style>
+        /* ========================================
+           SCOPED STYLES FOR BLOG-MANIFEST-DREAM-LIFE PAGE ONLY
+           ======================================== */
+        
+        /* Page wrapper with unique class */
+        .page-blog-manifest {
+            background: linear-gradient(180deg, #fffaf7 0%, #fbf4ef 100%);
+            min-height: 100vh;
+        }
+        
+        /* Hide the placeholder text */
+        .page-blog-manifest .blog-post-hero span {
+            display: none;
+        }
+        
+        /* CSS-only Hero Banner */
+        .page-blog-manifest .blog-post-hero {
+            background: linear-gradient(135deg, #f5ede4 0%, #f9f1e8 50%, #f5e8dc 100%);
+            height: 240px;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-blog-manifest .blog-post-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(218, 165, 152, 0.06) 0%, transparent 50%);
+        }
+        
+        /* Content Container */
+        .page-blog-manifest .blog-post-content {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .page-blog-manifest .blog-post-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Article Card */
+        .page-blog-manifest .blog-post-container {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 56px 64px;
+            margin-top: -80px;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            position: relative;
+            border: 1px solid rgba(218, 165, 152, 0.12);
+            max-width: 860px;
+        }
+        
+        /* Back to Blogs Link */
+        .page-blog-manifest .back-to-blogs {
+            display: inline-block;
+            color: #d4a574;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .page-blog-manifest .back-to-blogs:hover {
+            color: #c49463;
+            text-decoration: underline;
+        }
+        
+        /* Category Badge/Pill */
+        .page-blog-manifest .post-category {
+            display: inline-block;
+            background: rgba(212, 165, 116, 0.12);
+            color: #c49463;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+        }
+        
+        /* Title */
+        .page-blog-manifest .post-title {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: #2a2a2a;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+        
+        /* Post Meta */
+        .page-blog-manifest .post-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: #8a8a8a;
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(218, 165, 152, 0.15);
+        }
+        
+        /* Typography System */
+        .page-blog-manifest .post-paragraph {
+            color: #5a5a5a;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-blog-manifest .post-paragraph strong {
+            color: #2a2a2a;
+            font-weight: 600;
+        }
+        
+        /* Subheadings */
+        .page-blog-manifest .post-subheading {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            line-height: 1.3;
+            margin-top: 3rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        /* Quote/Highlight Block */
+        .page-blog-manifest .post-highlight {
+            background: linear-gradient(135deg, #faf7f3 0%, #f9f4ef 100%);
+            border-left: 4px solid #d4a574;
+            border-radius: 8px;
+            padding: 1.75rem 2rem;
+            margin: 2.5rem 0;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #2a2a2a;
+            line-height: 1.7;
+        }
+        
+        /* Special formatting for Manifestation Practice items */
+        .page-blog-manifest .post-subheading:has(+ .post-paragraph:contains("Here's a simple")) ~ .post-paragraph:has(strong),
+        .page-blog-manifest .manifestation-practice-item {
+            background: #fafafa;
+            border: 1px solid rgba(218, 165, 152, 0.1);
+            border-radius: 10px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .page-blog-manifest .manifestation-practice-item:hover {
+            background: #ffffff;
+            border-color: rgba(218, 165, 152, 0.25);
+            box-shadow: 0 2px 8px rgba(212, 165, 116, 0.08);
+        }
+        
+        /* CTA Panel */
+        .page-blog-manifest .blog-cta {
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.06), rgba(218, 165, 152, 0.04));
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            margin-top: 3.5rem;
+            text-align: center;
+        }
+        
+        .page-blog-manifest .blog-cta h3 {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.65rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 0.75rem;
+        }
+        
+        .page-blog-manifest .blog-cta > p {
+            color: #5a5a5a;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        /* CTA Buttons Container */
+        .page-blog-manifest .cta-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Button Base Styles */
+        .page-blog-manifest .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+        }
+        
+        /* Primary Button (Filled) */
+        .page-blog-manifest .btn-primary {
+            background: #d4a574;
+            color: #ffffff;
+            border: 1px solid #d4a574;
+        }
+        
+        .page-blog-manifest .btn-primary:hover {
+            background: #c49463;
+            border-color: #c49463;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+        }
+        
+        /* Secondary Button (Outline/Ghost) */
+        .page-blog-manifest .btn-secondary {
+            background: transparent;
+            color: #d4a574;
+            border: 1px solid #d4a574;
+        }
+        
+        .page-blog-manifest .btn-secondary:hover {
+            background: rgba(212, 165, 116, 0.08);
+            border-color: #c49463;
+            color: #c49463;
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-blog-manifest .blog-post-hero {
+                height: 180px;
+            }
+            
+            .page-blog-manifest .blog-post-container {
+                padding: 32px 24px;
+                margin-top: -60px;
+                margin-bottom: 3rem;
+            }
+            
+            .page-blog-manifest .post-title {
+                font-size: 1.75rem;
+            }
+            
+            .page-blog-manifest .post-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .page-blog-manifest .post-paragraph {
+                font-size: 1rem;
+            }
+            
+            .page-blog-manifest .post-subheading {
+                font-size: 1.5rem;
+                margin-top: 2.5rem;
+            }
+            
+            .page-blog-manifest .post-highlight {
+                padding: 1.25rem 1.5rem;
+                font-size: 1.05rem;
+            }
+            
+            .page-blog-manifest .manifestation-practice-item {
+                padding: 1rem 1.25rem;
+            }
+            
+            .page-blog-manifest .blog-cta {
+                padding: 2rem 1.5rem;
+            }
+            
+            .page-blog-manifest .blog-cta h3 {
+                font-size: 1.4rem;
+            }
+            
+            .page-blog-manifest .cta-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .page-blog-manifest .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="page-blog-manifest">
+    <nav class="marisol-navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="blog-post-hero"></div>
+
+    <section class="blog-post-content">
+        <div class="blog-post-container">
+            <a href="blogs.html" class="back-to-blogs">← Back to Blogs</a>
+            
+            <span class="post-category">Mindset & Personal Growth</span>
+            
+            <h1 class="post-title">Manifesting Your Dream Life</h1>
+            
+            <div class="post-meta">
+                <span class="post-date">January 5, 2026</span>
+                <span class="post-read-time">7 min read</span>
+            </div>
+
+            <p class="post-paragraph">
+                Manifestation isn't magic—it's alignment. It's not about wishing for things to appear out of thin air. It's about becoming the energetic match for the life you desire and taking inspired action from that place of alignment.
+            </p>
+
+            <p class="post-paragraph">
+                For years, I thought manifestation was about vision boards and affirmations alone. And while those tools are powerful, I was missing the most important piece: embodiment. You can't just think your way into a new reality—you have to become the version of yourself who already lives it.
+            </p>
+
+            <p class="post-highlight">
+                "Your dream life isn't something you chase. It's something you align with, embody, and allow to unfold."
+            </p>
+
+            <h2 class="post-subheading">The Energy of Manifestation</h2>
+
+            <p class="post-paragraph">
+                Everything is energy. Your thoughts, your emotions, your beliefs—they all carry a frequency. And the universe responds to that frequency. When you're vibrating at the level of lack, fear, or unworthiness, you'll continue to attract experiences that mirror those emotions.
+            </p>
+
+            <p class="post-paragraph">
+                But when you shift your energy to abundance, trust, and self-worth, you become a magnet for opportunities, connections, and experiences that align with your desires. This isn't about toxic positivity or pretending everything is perfect. It's about choosing to focus on what you want to create rather than what you fear.
+            </p>
+
+            <h2 class="post-subheading">Become the Version of You</h2>
+
+            <p class="post-paragraph">
+                Ask yourself: Who is the woman living my dream life? How does she move through her day? How does she speak to herself? What does she wear? How does she handle challenges?
+            </p>
+
+            <p class="post-paragraph">
+                Start embodying her now. Don't wait for the circumstances to change before you step into her energy. When you dress like her, speak like her, and carry yourself like her, you signal to the universe—and to yourself—that you're ready to receive what she has.
+            </p>
+
+            <p class="post-highlight">
+                "You don't attract what you want. You attract who you are."
+            </p>
+
+            <h2 class="post-subheading">Inspired Action vs. Hustle</h2>
+
+            <p class="post-paragraph">
+                Manifestation isn't passive, but it also isn't about forcing or hustling. There's a difference between inspired action and desperate action. Inspired action feels aligned, easeful, and exciting. Desperate action feels heavy, anxious, and draining.
+            </p>
+
+            <p class="post-paragraph">
+                When you're in alignment, the right opportunities will present themselves. Your job is to stay open, follow your intuition, and take action when it feels good—not because you're afraid of missing out or running out of time.
+            </p>
+
+            <h2 class="post-subheading">Trust the Timing</h2>
+
+            <p class="post-paragraph">
+                One of the hardest parts of manifestation is trusting divine timing. We want everything now. We want proof that it's working. We want to control the how and the when.
+            </p>
+
+            <p class="post-paragraph">
+                But the universe has a plan that's often better than what we could have imagined. Sometimes delays are redirections. Sometimes "no" is protection. Sometimes the wait is preparing you to hold what's coming.
+            </p>
+
+            <p class="post-paragraph">
+                Trust that what's meant for you will find you. Trust that you're being guided. Trust that your dreams are on their way—and in the meantime, keep showing up as the woman who's already living them.
+            </p>
+
+            <h2 class="post-subheading">Your Manifestation Practice</h2>
+
+            <p class="post-paragraph">
+                Here's a simple daily practice to align with your dream life:
+            </p>
+
+            <p class="post-paragraph manifestation-practice-item">
+                <strong>Morning Visualization:</strong> Spend 5 minutes visualizing your day as if you're already living your dream life. Feel the emotions. See the details. Embody the energy.
+            </p>
+
+            <p class="post-paragraph manifestation-practice-item">
+                <strong>Aligned Action:</strong> Take one action today that feels aligned with your vision. It doesn't have to be big—it just has to feel right.
+            </p>
+
+            <p class="post-paragraph manifestation-practice-item">
+                <strong>Evening Gratitude:</strong> Before bed, write down 3 things that happened today that are evidence of your manifestation unfolding. Train your mind to see proof that it's working.
+            </p>
+
+            <p class="post-paragraph">
+                Remember, you're not waiting for permission to live your dream life. You're not waiting for circumstances to align. You're choosing it now—and watching the magic unfold.
+            </p>
+
+            <p class="post-paragraph">
+                Your dream life isn't a distant destination—it's a frequency you can step into right now. Start with one aligned choice today, and watch how the universe responds.
+            </p>
+
+            <section class="blog-cta" aria-label="Call to action">
+                <h3>Ready for your next step?</h3>
+                <p>Stay connected and explore what's next—support, rituals, and offerings.</p>
+                <div class="cta-actions">
+                    <a class="btn btn-secondary" href="subscribe.html">Subscribe for Updates</a>
+                    <a class="btn btn-secondary" href="blogs.html">Explore Signature Pathways</a>
+                    <a class="btn btn-primary" href="products.html">Visit the Shop</a>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="blogs.html" class="footer-link">Blogs</a>
+            </nav>
+            <p class="footer-copyright">© Marisol — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

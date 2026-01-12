@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Marisol</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ASSETS/styles/site.css">
+    <link rel="stylesheet" href="ASSETS/styles/about.css">
+    <style>
+        /* ========================================
+           SCOPED STYLES FOR ABOUT PAGE ONLY
+           ======================================== */
+        
+        /* Page background */
+        .page-about {
+            background: linear-gradient(180deg, #fffaf7 0%, #fbf4ef 100%);
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #2a2a2a;
+        }
+        
+        /* Main container */
+        #about-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+        }
+        
+        /* Hero Section */
+        .about-hero {
+            margin-bottom: 5rem;
+        }
+        
+        .about-hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .about-hero-image {
+            position: sticky;
+            top: 6rem;
+        }
+        
+        .about-portrait {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            display: block;
+        }
+        
+        .about-hero-content {
+            padding-top: 1rem;
+        }
+        
+        .about-name {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: clamp(2.5rem, 4vw, 3.25rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: #2a2a2a;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+        }
+        
+        .about-title {
+            font-size: 0.95rem;
+            color: #d4a574;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+        }
+        
+        .about-bio {
+            margin-bottom: 3rem;
+        }
+        
+        .about-bio p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #5a5a5a;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-bio ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 1.5rem 0;
+        }
+        
+        .about-bio li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #5a5a5a;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+        }
+        
+        .about-bio li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: #d4a574;
+            font-weight: 500;
+        }
+        
+        /* Business name links inside bio list */
+        .about-business-link {
+            color: #d4a574;
+            text-decoration: none;
+            transition: color 0.2s ease, text-decoration 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .about-business-link:hover {
+            color: #c49463;
+            text-decoration: underline;
+        }
+        
+        .about-quote {
+            background: linear-gradient(135deg, #faf7f3 0%, #f9f4ef 100%);
+            border-left: 4px solid #d4a574;
+            border-radius: 8px;
+            padding: 2rem 2.5rem;
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: #2a2a2a;
+            line-height: 1.6;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        /* Brands & Ventures Section */
+        .about-section {
+            margin-top: 5rem;
+            padding-top: 0;
+            border-top: none;
+        }
+        
+        .about-section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        
+        .about-section-title {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: clamp(2rem, 3vw, 2.5rem);
+            font-weight: 400;
+            color: #2a2a2a;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        .about-section-subtitle {
+            font-size: 1.05rem;
+            color: #5a5a5a;
+            line-height: 1.7;
+        }
+        
+        /* 4-Card Grid - CRITICAL FIX */
+        .about-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .about-card {
+            background: #ffffff;
+            border: 1px solid rgba(218, 165, 152, 0.15);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 280px;
+        }
+        
+        .about-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(212, 165, 116, 0.12);
+            border-color: rgba(218, 165, 152, 0.25);
+        }
+        
+        .about-card-title {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        .about-card-description {
+            color: #5a5a5a;
+            font-size: 0.975rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .about-card-link {
+            color: #d4a574;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-top: auto;
+        }
+        
+        .about-card-link:hover {
+            color: #c49463;
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.75rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #about-page {
+                padding: 5rem 1.5rem 3rem;
+            }
+            
+            .about-hero {
+                margin-bottom: 3.5rem;
+            }
+            
+            .about-hero-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            
+            .about-hero-image {
+                position: relative;
+                top: 0;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .about-name {
+                font-size: 2rem;
+            }
+            
+            .about-title {
+                font-size: 0.875rem;
+                margin-bottom: 2rem;
+            }
+            
+            .about-bio p,
+            .about-bio li {
+                font-size: 1rem;
+            }
+            
+            .about-quote {
+                padding: 1.5rem 1.75rem;
+                font-size: 1.1rem;
+                margin-top: 2rem;
+            }
+            
+            .about-section {
+                margin-top: 3.5rem;
+                padding-top: 3rem;
+            }
+            
+            .about-section-header {
+                margin-bottom: 2.5rem;
+            }
+            
+            .about-section-title {
+                font-size: 1.75rem;
+            }
+            
+            .about-cards {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .about-card {
+                padding: 2rem 1.5rem;
+                min-height: auto;
+            }
+            
+            .about-card-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body class="page page-about">
+    <nav class="marisol-navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="about-page">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="about-hero-container">
+                <div class="about-hero-image">
+                    <img src="ASSETS/Images/bio/mainbio.JPG" alt="Marisol Moran - Founder & Creative Director" class="about-portrait" loading="eager">
+                </div>
+                <div class="about-hero-content">
+                    <h1 class="about-name">Marisol Moran</h1>
+                    <p class="about-title">Founder & Creative Director of Soul Shine Collections</p>
+                    
+                    <div class="about-bio">
+                        <p>Marisol Moran is a visionary founder, creative director, and multidimensional entrepreneur redefining the intersection of fashion, wellness, and feminine leadership.</p>
+
+                        <p>As the founder of Soul Shine Collections, Marisol built a luxury-conscious brand rooted in self-expression, intentional living, and inner radiance. What began as a creative vision evolved into an ecosystem of transformational offerings designed to support women in both their personal growth and professional expansion.</p>
+
+                        <p>Beyond Soul Shine Collections, Marisol is the creator of:</p>
+                        <ul>
+                            <li><a href="goddess-spark-tribe.html" class="about-business-link">The Goddess Spark Tribe</a> — coaching platform, digital courses, and podcast</li>
+                            <li><a href="goddess-collection.html" class="about-business-link">The Goddess Collection</a> — custom couture gowns and ceremonial designs</li>
+                            <li><a href="apparel-consulting.html" class="about-business-link">Design to Delivery</a> — apparel design & sourcing consulting, design strategy, and creative direction</li>
+                        </ul>
+
+                        <p>Marisol's work blends business precision with emotional depth. She believes true success is built through both vision and connection — empowering women to rise financially, creatively, and spiritually.</p>
+                    </div>
+
+                    <div class="about-quote">
+                        "Ambition with alignment. Luxury with meaning. Leadership with heart."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands & Ventures Section -->
+        <section class="about-section">
+            <div class="about-section-header">
+                <h2 class="about-section-title">Brands & Ventures</h2>
+                <p class="about-section-subtitle">A portfolio of transformational offerings</p>
+            </div>
+
+            <div class="about-cards">
+                <div class="about-card">
+                    <h3 class="about-card-title">Soul Shine Collections</h3>
+                    <p class="about-card-description">Luxury-conscious lifestyle brand celebrating feminine self-expression and intentional living.</p>
+                    <a href="https://www.soulshinecollections.com" target="_blank" rel="noopener noreferrer" class="about-card-link">Visit Brand →</a>
+                </div>
+
+                <div class="about-card">
+                    <h3 class="about-card-title">The Goddess Spark Tribe</h3>
+                    <p class="about-card-description">Podcast, coaching, and digital tools for embodied transformation and radiant self-leadership.</p>
+                    <a href="goddess-spark-tribe.html" class="about-card-link">Explore Platform →</a>
+                </div>
+
+                <div class="about-card">
+                    <h3 class="about-card-title">The Goddess Collection</h3>
+                    <p class="about-card-description">Custom gowns and ceremonial couture designed for unforgettable moments.</p>
+                    <a href="goddess-collection.html" class="about-card-link">View Collection →</a>
+                </div>
+
+                <div class="about-card">
+                    <h3 class="about-card-title">Design to Delivery</h3>
+                    <p class="about-card-description">End-to-end design strategy, apparel design & sourcing consulting, and production guidance for brands and visionaries.</p>
+                    <a href="apparel-consulting.html" class="about-card-link">Learn More →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="blogs.html" class="footer-link">Blogs</a>
+            </nav>
+            <p class="footer-copyright">© Marisol — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

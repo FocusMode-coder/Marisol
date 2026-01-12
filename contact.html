@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Marisol</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ASSETS/styles/site.css">
+    <style>
+        /* ========================================
+           SCOPED STYLES FOR CONTACT PAGE ONLY
+           ======================================== */
+        
+        /* Page background */
+        .page-contact {
+            background: linear-gradient(180deg, #fffaf7 0%, #fbf4ef 100%);
+            min-height: 100vh;
+        }
+        
+        /* Main container */
+        .page-contact .page {
+            padding: 6rem 0 4rem;
+        }
+        
+        .page-contact .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Hero Title */
+        .page-contact .page-title {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: #2a2a2a;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        /* Decorative underline for title */
+        .page-contact .page-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4a574, #daa598);
+            margin: 1.5rem auto 0;
+            border-radius: 2px;
+        }
+        
+        /* Subtitle */
+        .page-contact .page-subtitle {
+            font-size: clamp(1.05rem, 2vw, 1.2rem);
+            color: #5a5a5a;
+            line-height: 1.7;
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Section */
+        .page-contact .section {
+            margin-bottom: 3rem;
+        }
+        
+        /* Form Card */
+        .page-contact .card {
+            background: #ffffff;
+            border: 1px solid rgba(218, 165, 152, 0.15);
+            border-radius: 16px;
+            padding: 3rem 3.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        
+        /* Form Grid */
+        .page-contact .form-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+        
+        /* Form Group */
+        .page-contact .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Form Labels */
+        .page-contact .form-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a2a2a;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            font-size: 0.825rem;
+        }
+        
+        /* Form Inputs */
+        .page-contact .form-input,
+        .page-contact .form-textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid rgba(218, 165, 152, 0.2);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            color: #2a2a2a;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
+        
+        /* Focus State */
+        .page-contact .form-input:focus,
+        .page-contact .form-textarea:focus {
+            outline: none;
+            border-color: #d4a574;
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+        }
+        
+        /* Textarea */
+        .page-contact .form-textarea {
+            resize: vertical;
+            min-height: 150px;
+            line-height: 1.6;
+        }
+        
+        /* Submit Button */
+        .page-contact .btn-full {
+            width: 100%;
+            max-width: 280px;
+            margin: 1.5rem auto 0;
+            padding: 1rem 2rem;
+            background: #d4a574;
+            color: #ffffff;
+            border: 1px solid #d4a574;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            text-align: center;
+        }
+        
+        .page-contact .btn-full:hover {
+            background: #c49463;
+            border-color: #c49463;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+        }
+        
+        .page-contact .btn-full:active {
+            transform: translateY(0);
+        }
+        
+        /* Helper Text */
+        .page-contact .form-helper {
+            text-align: center;
+            color: #8a8a8a;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-contact .page {
+                padding: 5rem 0 3rem;
+            }
+            
+            .page-contact .container {
+                padding: 0 1.5rem;
+            }
+            
+            .page-contact .page-title {
+                font-size: 2rem;
+            }
+            
+            .page-contact .page-subtitle {
+                font-size: 1.05rem;
+                margin-bottom: 2.5rem;
+            }
+            
+            .page-contact .card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .page-contact .form-grid {
+                gap: 1.5rem;
+            }
+            
+            .page-contact .btn-full {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="page page-contact">
+    <nav class="marisol-navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="page">
+        <div class="container">
+            <h1 class="page-title">Get in Touch</h1>
+            <p class="page-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+
+            <div class="section">
+                <div class="card">
+                    <form action="#" method="POST" class="form-grid">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-full">Send Message</button>
+                        <p class="form-helper">We reply within 24–48 hours.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="blogs.html" class="footer-link">Blogs</a>
+            </nav>
+            <p class="footer-copyright">© Marisol — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('contactSuccess').style.display = 'flex';
+            
+            document.getElementById('contactSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            setTimeout(() => {
+                this.reset();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

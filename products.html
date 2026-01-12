@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop — Marisol</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ASSETS/styles/site.css">
+    <link rel="stylesheet" href="ASSETS/styles/products.css">
+    <!-- Products Page Enhancements - SCOPED TO PRODUCTS PAGE ONLY -->
+    <link rel="stylesheet" href="ASSETS/styles/products-enhancements.css">
+</head>
+<body class="page page-products products-page">
+    <div class="page-shop">
+        <nav class="marisol-navbar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <div id="products-page">
+            <header class="shop-header shop-hero">
+                <h1>Shop</h1>
+                <p>Digital & physical tools curated for your glow.</p>
+            </header>
+
+            <section class="shop-section">
+                <div class="shop-container">
+                    <!-- Premium Product Grid - 5 Products -->
+                    <div class="premium-product-grid products-grid">
+                        
+                        <!-- Product 1: Divine Goddess Course (FREE) -->
+                        <div class="premium-product-card" data-category="digital">
+                            <div class="premium-product-image">
+                                <img src="ASSETS/Images/products/divine-goddess-course-3d:free:download:file.png" alt="Divine Goddess Course (Free Starter)" loading="lazy">
+                                <span class="premium-product-badge free">FREE</span>
+                            </div>
+                            <div class="premium-product-content">
+                                <h3 class="premium-product-title">Divine Goddess Course (Free Starter)</h3>
+                                <div class="premium-product-price free">Free</div>
+                                <p class="premium-product-hook">Start your journey to embodied feminine power with this free intro module.</p>
+                                <a href="#" class="premium-product-cta primary" onclick="openModal(); return false;">Download Now</a>
+                            </div>
+                        </div>
+
+                        <!-- Product 2: Love Course -->
+                        <div class="premium-product-card" data-category="digital">
+                            <div class="premium-product-image">
+                                <img src="ASSETS/Images/products/love-course-3d:digital:99.png" alt="Love Course" loading="lazy">
+                                <span class="premium-product-badge">DIGITAL</span>
+                            </div>
+                            <div class="premium-product-content">
+                                <h3 class="premium-product-title">Love Course</h3>
+                                <div class="premium-product-price">$99</div>
+                                <p class="premium-product-hook">Master self-love and attract relationships that honor your worth.</p>
+                                <a href="#" class="premium-product-cta" onclick="openModal(); return false;">Get it now</a>
+                            </div>
+                        </div>
+
+                        <!-- Product 3: Planner & Journal -->
+                        <div class="premium-product-card" data-category="physical">
+                            <div class="premium-product-image">
+                                <img src="ASSETS/Images/products/planner-3d:%20fisico:digital.%2014.99.png" alt="Planner & Journal" loading="lazy">
+                                <span class="premium-product-badge">DIGITAL + PHYSICAL</span>
+                            </div>
+                            <div class="premium-product-content">
+                                <h3 class="premium-product-title">Planner & Journal</h3>
+                                <div class="premium-product-price">$14.99</div>
+                                <p class="premium-product-hook">Your ritual companion for intentional living and aligned action.</p>
+                                <a href="#" class="premium-product-cta primary" onclick="openModal(); return false;">Get it now</a>
+                            </div>
+                        </div>
+
+                        <!-- Product 4: Radiant Book -->
+                        <div class="premium-product-card" data-category="book">
+                            <div class="premium-product-image">
+                                <img src="ASSETS/Images/products/radiant-book-3d%20digital:99.png" alt="Radiant Book" loading="lazy">
+                                <span class="premium-product-badge">DIGITAL</span>
+                            </div>
+                            <div class="premium-product-content">
+                                <h3 class="premium-product-title">Radiant Book</h3>
+                                <div class="premium-product-price">$99</div>
+                                <p class="premium-product-hook">A timeless guide to ignite your inner spark and reclaim your power.</p>
+                                <a href="#" class="premium-product-cta primary" onclick="openModal(); return false;">Get it now</a>
+                            </div>
+                        </div>
+
+                        <!-- Product 5: Spark In -->
+                        <div class="premium-product-card" data-category="physical">
+                            <div class="premium-product-image">
+                                <img src="ASSETS/Images/products/sparkin-3d(digital:fisico:14.99.png" alt="Spark In" loading="lazy">
+                                <span class="premium-product-badge">DIGITAL + PHYSICAL</span>
+                            </div>
+                            <div class="premium-product-content">
+                                <h3 class="premium-product-title">Spark In</h3>
+                                <div class="premium-product-price">$14.99</div>
+                                <p class="premium-product-hook">Reignite your creativity and inner fire with this transformative toolkit.</p>
+                                <a href="#" class="premium-product-cta primary" onclick="openModal(); return false;">Get it now</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Premium Modal -->
+            <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+                <div class="modal-content" onclick="event.stopPropagation()">
+                    <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+                    <div class="modal-body">
+                        <span class="modal-icon">✦</span>
+                        <h2 class="modal-title">Checkout Launching Soon</h2>
+                        <p class="modal-text">We're putting the finishing touches on our checkout experience. Sign up below to be notified when products launch.</p>
+                        <a href="contact.html" class="modal-btn">Join Waitlist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <nav class="footer-nav">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="blogs.html" class="footer-link">Blogs</a>
+                </nav>
+                <p class="footer-copyright">© Marisol — All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Modal functions
+        function openModal() {
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+    
+    <!-- Products Page Enhancements Script - SCOPED TO PRODUCTS PAGE ONLY -->
+    <script src="ASSETS/js/products-enhancements.js"></script>
+</body>
+</html>
