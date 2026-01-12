@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300">
+    <title>Marisol - Keep Alive Monitor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .monitor-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem 4rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .status-indicator {
+            width: 80px;
+            height: 80px;
+            background: #10b981;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            animation: pulse 2s ease-in-out infinite;
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .status-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
+        
+        .info-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        
+        .info-label {
+            font-size: 0.875rem;
+            opacity: 0.8;
+            margin-bottom: 0.25rem;
+        }
+        
+        .info-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .timestamp {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .monitor-container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="monitor-container">
+        <div class="status-indicator"></div>
+        <h1>Marisol Website</h1>
+        <p class="status-text">System Active & Monitored</p>
+        
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">Status</div>
+                <div class="info-value" id="status">Online</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Uptime</div>
+                <div class="info-value" id="uptime">Active</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Last Check</div>
+                <div class="info-value" id="lastCheck">-</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Ping Count</div>
+                <div class="info-value" id="pingCount">0</div>
+            </div>
+        </div>
+        
+        <p class="timestamp">
+            Auto-refresh every 5 minutes | Current: <span id="currentTime"></span>
+        </p>
+    </div>
+
+    <script>
+        let pingCount = 0;
+        let startTime = Date.now();
+        
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('currentTime').textContent = now.toLocaleTimeString();
+            
+            // Update uptime
+            const uptime = Math.floor((Date.now() - startTime) / 1000);
+            const hours = Math.floor(uptime / 3600);
+            const minutes = Math.floor((uptime % 3600) / 60);
+            const seconds = uptime % 60;
+            document.getElementById('uptime').textContent = `${hours}h ${minutes}m ${seconds}s`;
+        }
+        
+        // Ping function to keep site active
+        function ping() {
+            pingCount++;
+            document.getElementById('pingCount').textContent = pingCount;
+            document.getElementById('lastCheck').textContent = new Date().toLocaleTimeString();
+            
+            // Ping the main pages to keep them active
+            const pages = ['/', '/index.html', '/about.html', '/blogs.html'];
+            pages.forEach(page => {
+                fetch(page, { method: 'HEAD' }).catch(() => {});
+            });
+            
+            // Store in localStorage to persist across refreshes
+            localStorage.setItem('keepAlivePingCount', pingCount);
+            localStorage.setItem('keepAliveStartTime', startTime);
+        }
+        
+        // Initialize from localStorage
+        function init() {
+            const savedPingCount = localStorage.getItem('keepAlivePingCount');
+            const savedStartTime = localStorage.getItem('keepAliveStartTime');
+            
+            if (savedPingCount) pingCount = parseInt(savedPingCount);
+            if (savedStartTime) startTime = parseInt(savedStartTime);
+            
+            updateTime();
+            ping();
+            
+            // Update time every second
+            setInterval(updateTime, 1000);
+            
+            // Ping every 60 seconds
+            setInterval(ping, 60000);
+        }
+        
+        init();
+    </script>
+</body>
+</html>
