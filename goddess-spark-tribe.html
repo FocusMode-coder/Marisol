@@ -331,32 +331,228 @@
             margin-bottom: 1.5rem;
         }
         
+        /* Pricing Cards */
+        .gst-pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .gst-pricing-card {
+            background: #ffffff;
+            border: 1px solid rgba(218, 165, 152, 0.18);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .gst-pricing-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(212, 165, 116, 0.16);
+            border-color: rgba(212, 165, 116, 0.35);
+        }
+
+        .gst-pricing-card--featured {
+            background: linear-gradient(160deg, #2a1a14 0%, #3d2218 100%);
+            border-color: #d4a574;
+        }
+
+        .gst-pricing-card--featured .gst-pricing-name,
+        .gst-pricing-card--featured .gst-pricing-price,
+        .gst-pricing-card--featured .gst-pricing-desc,
+        .gst-pricing-card--featured .gst-pricing-feature {
+            color: #faf8f6;
+        }
+
+        .gst-pricing-card--featured .gst-pricing-price {
+            color: #d4a574;
+        }
+
+        .gst-pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #d4a574;
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .gst-pricing-name {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .gst-pricing-price {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 2.75rem;
+            font-weight: 400;
+            color: #d4a574;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .gst-pricing-period {
+            font-size: 0.875rem;
+            color: #8a8a8a;
+            margin-bottom: 1.5rem;
+        }
+
+        .gst-pricing-card--featured .gst-pricing-period {
+            color: rgba(250, 248, 246, 0.6);
+        }
+
+        .gst-pricing-divider {
+            border: none;
+            border-top: 1px solid rgba(218, 165, 152, 0.2);
+            margin: 1.5rem 0;
+        }
+
+        .gst-pricing-card--featured .gst-pricing-divider {
+            border-color: rgba(212, 165, 116, 0.3);
+        }
+
+        .gst-pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .gst-pricing-feature {
+            font-size: 0.95rem;
+            color: #5a5a5a;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .gst-pricing-feature::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #d4a574;
+            font-size: 0.7rem;
+            top: 0.55rem;
+        }
+
+        .gst-pricing-desc {
+            font-size: 0.95rem;
+            color: #5a5a5a;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Digital Products Grid */
+        .gst-products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .gst-product-card {
+            background: linear-gradient(135deg, #faf7f3 0%, #f5ede4 100%);
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            border-radius: 14px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .gst-product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(212, 165, 116, 0.15);
+            border-color: rgba(212, 165, 116, 0.35);
+        }
+
+        .gst-product-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .gst-product-name {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .gst-product-desc {
+            font-size: 0.95rem;
+            color: #5a5a5a;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .gst-product-price {
+            font-size: 1.5rem;
+            font-family: 'Georgia', 'Garamond', serif;
+            color: #d4a574;
+            margin-bottom: 1rem;
+        }
+
         /* Responsive Design */
+        @media (max-width: 900px) {
+            .gst-pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .gst-products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             .gst-hero {
                 padding: 6rem 1.5rem 3rem;
             }
-            
+
             .gst-container {
                 padding: 1.5rem 1.5rem 4rem;
             }
-            
+
             .gst-section {
                 padding: 2rem 1.5rem;
             }
-            
+
             .gst-hero h1 {
                 font-size: 2rem;
             }
-            
+
             .gst-hero p {
                 font-size: 1.05rem;
             }
-            
+
             .gst-section h2 {
                 font-size: 1.5rem;
             }
-            
+
             .gst-episode-meta {
                 flex-direction: column;
                 align-items: flex-start;
@@ -514,34 +710,89 @@
             </div>
         </section>
 
-        <!-- Shop & Offerings Section -->
+        <!-- High-Ticket Services Section -->
         <section class="gst-section">
-            <h2>Shop & Offerings</h2>
-            <p>Deepen your journey with tools, courses, and resources designed for your transformation.</p>
-            
-            <div class="gst-offerings-grid">
-                
-                <div class="gst-offering-card">
-                    <h3>The Goddess Spark Planner</h3>
-                    <p>Your daily companion for manifesting, rituals, and aligned action.</p>
-                    <a href="/products.html" class="gst-btn gst-btn-secondary">Explore Planner</a>
+            <h2>Work With Marisol</h2>
+            <p>High-touch, personalized experiences for women ready to invest in their transformation, their brand, and their life.</p>
+
+            <div class="gst-pricing-grid">
+
+                <div class="gst-pricing-card">
+                    <p class="gst-pricing-name">VIP Intensive Day</p>
+                    <p class="gst-pricing-price">$1,500</p>
+                    <p class="gst-pricing-period">One full day, dedicated to you</p>
+                    <hr class="gst-pricing-divider">
+                    <ul class="gst-pricing-features">
+                        <li class="gst-pricing-feature">6-hour deep-dive session</li>
+                        <li class="gst-pricing-feature">Brand clarity + identity work</li>
+                        <li class="gst-pricing-feature">Mindset + embodiment coaching</li>
+                        <li class="gst-pricing-feature">Personalized action plan</li>
+                        <li class="gst-pricing-feature">30-day follow-up support</li>
+                    </ul>
+                    <a href="/contact.html" class="gst-btn">Apply Now</a>
                 </div>
 
-                <div class="gst-offering-card">
-                    <h3>Divine Goddess Course</h3>
-                    <p>A transformational journey to reclaim your power and embody your divine feminine.</p>
-                    <a href="/products.html" class="gst-btn gst-btn-secondary">Explore Course</a>
+                <div class="gst-pricing-card gst-pricing-card--featured">
+                    <span class="gst-pricing-badge">Most Popular</span>
+                    <p class="gst-pricing-name">1:1 Transformation Coaching</p>
+                    <p class="gst-pricing-price">$2,500</p>
+                    <p class="gst-pricing-period">3-month private coaching container</p>
+                    <hr class="gst-pricing-divider">
+                    <ul class="gst-pricing-features">
+                        <li class="gst-pricing-feature">Bi-weekly 1:1 coaching sessions</li>
+                        <li class="gst-pricing-feature">Feminine identity + confidence work</li>
+                        <li class="gst-pricing-feature">Mindset, wellness & business alignment</li>
+                        <li class="gst-pricing-feature">Voice notes + messenger support</li>
+                        <li class="gst-pricing-feature">Custom resources & workbooks</li>
+                        <li class="gst-pricing-feature">Full access to digital products</li>
+                    </ul>
+                    <a href="/contact.html" class="gst-btn">Apply Now</a>
                 </div>
 
-                <div class="gst-offering-card">
-                    <h3>Radiant Life Masterclass</h3>
-                    <p>Learn the rituals and mindset shifts to create a life that lights you up.</p>
-                    <a href="/products.html" class="gst-btn gst-btn-secondary">Explore Masterclass</a>
+                <div class="gst-pricing-card">
+                    <p class="gst-pricing-name">Business & Brand Strategy</p>
+                    <p class="gst-pricing-price">$3,500</p>
+                    <p class="gst-pricing-period">Premium brand-building container</p>
+                    <hr class="gst-pricing-divider">
+                    <ul class="gst-pricing-features">
+                        <li class="gst-pricing-feature">Brand positioning + messaging</li>
+                        <li class="gst-pricing-feature">Offer suite design & pricing</li>
+                        <li class="gst-pricing-feature">Content strategy & visibility plan</li>
+                        <li class="gst-pricing-feature">Launch strategy & execution</li>
+                        <li class="gst-pricing-feature">4-month strategic partnership</li>
+                    </ul>
+                    <a href="/contact.html" class="gst-btn">Apply Now</a>
                 </div>
-                
+
             </div>
 
-            <a href="/products.html" class="gst-btn gst-btn-center">Visit the Shop</a>
+            <p style="text-align:center; color:#8a8a8a; font-size:0.9rem; margin-top:1rem;">All packages are by application only. Limited spots available each season.</p>
+        </section>
+
+        <!-- Digital Products Section -->
+        <section class="gst-section">
+            <h2>Digital Products</h2>
+            <p>Powerful tools to support your journey — designed to go deep and create lasting shifts. Available for immediate download.</p>
+
+            <div class="gst-products-grid">
+
+                <div class="gst-product-card">
+                    <span class="gst-product-icon">📖</span>
+                    <h3 class="gst-product-name">Divine Goddess Workbook</h3>
+                    <p class="gst-product-desc">A comprehensive healing and self-development program. Structured journaling, identity work, and embodiment practices to awaken the goddess within.</p>
+                    <p class="gst-product-price">$27</p>
+                    <a href="/assets/downloads/DivineGoddess_Workbook.pdf" download class="gst-btn">Download Now</a>
+                </div>
+
+                <div class="gst-product-card">
+                    <span class="gst-product-icon">✨</span>
+                    <h3 class="gst-product-name">Awaken Your Divine Goddess</h3>
+                    <p class="gst-product-desc">A guided workbook to help you reclaim your power, realign with your true self, and step into your most radiant expression — inside and out.</p>
+                    <p class="gst-product-price">$27</p>
+                    <a href="/assets/downloads/AwakenYourDivineGoddess_Workbook.pdf" download class="gst-btn">Download Now</a>
+                </div>
+
+            </div>
         </section>
 
     </main>

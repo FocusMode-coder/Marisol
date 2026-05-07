@@ -21,7 +21,7 @@ body {
     
     /* Background Image */
     background-color: #ffffff;
-    background-image: url('/assets/backgrounds/bg-hero.png');
+    background-image: url('ASSETS/backgrounds/BG.HERO.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -98,7 +98,7 @@ body {
 .nav-link {
     text-decoration: none;
     color: #2a2a2a;
-    font-size: 0.975rem; /* Aumentado de 0.75rem → +30% */
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -474,10 +474,10 @@ body {
     transform: translateY(-2px);
 }
 
-/* Icono dentro del frame (40% más grande) */
+/* Icono dentro del frame (grande, sin recorte) */
 .pathway-icon {
-    width: 140%; /* Aumentado de 100% → +40% */
-    height: 140%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     display: block;
 }
@@ -688,8 +688,8 @@ body {
 }
 
 .feature-icon {
-    width: 140%; /* Aumentado de 100% → +40% */
-    height: 140%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     display: block;
 }
@@ -869,373 +869,998 @@ body {
 }
 
 /* ========================================
-   SHOP PAGE - SINGLE VIEW (NO TABS)
+   CONTACT & ABOUT PAGE STYLES
    ======================================== */
 
-.shop-hero{
-  text-align: center;
-  margin: 40px 0 28px;
+.page {
+    min-height: calc(100vh - 80px);
+    padding: 5rem 2rem 3rem 2rem;
+    background: #fafafa;
 }
 
-.shop-hero h1{
-  margin: 0 0 10px;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.shop-hero p{
-  margin: 0 auto;
-  max-width: 680px;
+.page-title {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
-.products-grid, .shop-grid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(240px, 1fr));
-  gap: 26px;
-  align-items: start;
-  justify-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+.page-subtitle {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1.1rem;
+    color: #5a5a5a;
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 1.6;
 }
 
-@media (max-width: 1100px){
-  .products-grid, .shop-grid{
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
-  }
+.section {
+    margin-bottom: 3rem;
 }
 
-@media (max-width: 680px){
-  .products-grid, .shop-grid{
-    grid-template-columns: 1fr;
-  }
+.card {
+    background: #ffffff;
+    border: 1px solid rgba(218, 165, 152, 0.15);
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
-/* Uniformar cards sin romper diseño existente */
-.product-card{
-  width: 100%;
-  max-width: 360px;
+/* Form Styles */
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #2a2a2a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1rem;
+    color: #2a2a2a;
+    padding: 0.875rem 1.25rem;
+    border: 1px solid rgba(218, 165, 152, 0.3);
+    border-radius: 8px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    border-color: #d4a574;
+    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 150px;
+    line-height: 1.6;
+}
+
+.btn {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 1rem 2.5rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-full {
+    width: 100%;
+    background: #d4a574;
+    color: #ffffff;
+}
+
+.btn-full:hover {
+    background: #c49463;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+}
+
+/* About Hero */
+.about-hero {
+    background: #ffffff;
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(218, 165, 152, 0.15);
+}
+
+.about-title {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.about-subtitle {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1.1rem;
+    color: #5a5a5a;
+    font-style: italic;
+}
+
+.about-content {
+    background: #ffffff;
+    padding: 4rem 2rem;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-section {
+    margin-bottom: 3rem;
+}
+
+.about-section-title {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.about-text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #3a3a3a;
+    margin-bottom: 1.5rem;
+}
+
+.about-highlight {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #d4a574;
+    line-height: 1.7;
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(218, 165, 152, 0.2);
+    border-bottom: 1px solid rgba(218, 165, 152, 0.2);
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page {
+        padding: 3rem 1.5rem 2rem 1.5rem;
+    }
+
+    .page-title,
+    .about-title {
+        font-size: 2.25rem;
+    }
+
+    .page-subtitle,
+    .about-subtitle {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    .about-hero {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .about-content {
+        padding: 3rem 1.5rem;
+    }
+
+    .about-section-title {
+        font-size: 1.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 2.5rem 1rem 1.5rem 1rem;
+    }
+
+    .page-title,
+    .about-title {
+        font-size: 1.85rem;
+    }
+
+    .page-subtitle,
+    .about-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .about-hero {
+        padding: 2.5rem 1rem 1.5rem;
+    }
+
+    .about-content {
+        padding: 2.5rem 1rem;
+    }
+
+    .about-section-title {
+        font-size: 1.45rem;
+    }
+
+    .about-text {
+        font-size: 0.95rem;
+    }
+
+    .about-highlight {
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
 }
 
 /* ========================================
-   HOME ONLY — HERO IMAGE FIX
+   BLOGS PAGE STYLES
    ======================================== */
-.page-home .welcome-section .hero-illustration,
-.page-home .welcome-image .hero-illustration{
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-  max-width: 620px;
-  width: 100%;
-  height: 560px;
-  margin-left: auto;
+
+.blogs-hero {
+    background: #ffffff;
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(218, 165, 152, 0.15);
 }
 
-.page-home .welcome-section .hero-illustration__img,
-.page-home .welcome-image .hero-illustration__img{
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-height: 560px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: inherit;
+.blogs-title {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
-@media (max-width: 980px){
-  .page-home .welcome-section .hero-illustration,
-  .page-home .welcome-image .hero-illustration{
-    height: 460px;
-    max-width: 100%;
-  }
-  .page-home .welcome-section .hero-illustration__img,
-  .page-home .welcome-image .hero-illustration__img{
-    max-height: 460px;
-  }
+.blogs-subtitle {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1.1rem;
+    color: #5a5a5a;
+    font-style: italic;
 }
 
-@media (max-width: 560px){
-  .page-home .welcome-section .hero-illustration,
-  .page-home .welcome-image .hero-illustration{
-    height: 360px;
-  }
-  .page-home .welcome-section .hero-illustration__img,
-  .page-home .welcome-image .hero-illustration__img{
-    max-height: 360px;
-  }
+.featured-section {
+    background: #ffffff;
+    padding: 4rem 2rem;
 }
 
-/* ========================================
-   HOME ONLY — CARD ICONS FIX
-   ======================================== */
-.page-home .pathway-icon-frame,
-.page-home .card-icon{
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  width: 156px;
-  height: 156px;
+.featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.page-home .pathway-icon,
-.page-home .card-icon__img{
-  display: block;
-  width: 80% !important;
-  height: 80% !important;
-  max-width: 140px;
-  max-height: 140px;
-  object-fit: contain;
-  object-position: center;
+.section-label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #d4a574;
+    display: block;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-@media (max-width: 560px){
-  .page-home .pathway-icon-frame,
-  .page-home .card-icon{
-    width: 140px;
-    height: 140px;
-  }
+.blog-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
 }
 
-/* ========================================
-   SHOP ONLY — POLISH + COLOR
-   ======================================== */
-.page-shop{
-  /* fondo más cálido y premium (sin tocar el body global) */
-  background: radial-gradient(1200px 600px at 50% 0%,
-    rgba(214, 168, 120, 0.14),
-    rgba(255, 255, 255, 0) 60%),
-    linear-gradient(180deg,
-    rgba(255, 252, 248, 1) 0%,
-    rgba(255, 250, 244, 1) 40%,
-    rgba(255, 255, 255, 1) 100%);
-  padding-top: 18px;
+.blog-card {
+    background: #ffffff;
+    border: 1px solid rgba(218, 165, 152, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Header Shop (título + subtítulo) */
-.page-shop h1,
-.page-shop .shop-hero h1{
-  font-size: clamp(34px, 4vw, 54px);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  margin: 24px 0 8px;
-  color: #171411;
-  text-align: center;
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(218, 165, 152, 0.15);
+    border-color: #d4a574;
 }
 
-.page-shop .shop-hero p,
-.page-shop header p{
-  margin: 0 auto 22px;
-  max-width: 720px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.6;
-  color: rgba(23, 20, 17, 0.70);
+.blog-card-image {
+    width: 100%;
+    aspect-ratio: 16/10;
+    background: linear-gradient(135deg, 
+        rgba(232, 218, 218, 0.3) 0%, 
+        rgba(218, 165, 152, 0.2) 50%, 
+        rgba(232, 218, 218, 0.3) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(218, 165, 152, 0.1);
 }
 
-/* Zona productos: más separación y mejor lectura */
-.page-shop .products-grid,
-.page-shop .premium-product-grid{
-  margin-top: 24px;
-  gap: 26px;
+.blog-card-image span {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 0.95rem;
+    color: #d4a574;
+    font-style: italic;
 }
 
-/* Cards: más "premium" sin cambiar estructura */
-.page-shop .premium-product-card{
-  background: rgba(255, 255, 255, 0.84);
-  border: 1px solid rgba(214, 168, 120, 0.28);
-  box-shadow:
-    0 16px 44px rgba(20, 16, 12, 0.06),
-    0 2px 10px rgba(20, 16, 12, 0.04);
-  border-radius: 18px;
-  overflow: hidden;
+.blog-card-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Imagen más "gallery" (no lavada) */
-.page-shop .premium-product-card img,
-.page-shop .premium-product-image img{
-  display: block;
-  width: 100%;
-  height: auto;
-  filter: saturate(1.06) contrast(1.02);
+.blog-category {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #d4a574;
+    margin-bottom: 0.75rem;
 }
 
-/* TITULOS de productos (que se vean como títulos) */
-.page-shop .premium-product-title,
-.page-shop .premium-product-card h3{
-  font-size: 18px;
-  line-height: 1.2;
-  margin: 14px 0 8px;
-  color: #1b1612;
-  letter-spacing: -0.01em;
-  font-weight: 600;
+.blog-card-title {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
 }
 
-/* Precio con jerarquía */
-.page-shop .premium-product-price{
-  font-size: 18px;
-  font-weight: 600;
-  color: #b8844f; /* dorado cálido */
-  margin-top: 6px;
+.blog-card-excerpt {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #5a5a5a;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
 }
 
-/* Texto descriptivo */
-.page-shop .premium-product-hook{
-  color: rgba(23, 20, 17, 0.70);
+.blog-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(218, 165, 152, 0.1);
 }
 
-/* Botones CTA más claros */
-.page-shop .premium-product-cta{
-  background: linear-gradient(180deg, #d6a878, #c89460);
-  color: #ffffff;
-  border: 1px solid rgba(214, 168, 120, 0.55);
-  box-shadow: 0 10px 22px rgba(214, 168, 120, 0.22);
+.read-more {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #d4a574;
+    letter-spacing: 0.05em;
 }
 
-.page-shop .premium-product-cta:hover{
-  filter: brightness(1.03);
+.blog-card:hover .read-more {
+    text-decoration: underline;
 }
 
-/* Tags arriba de las imágenes (Digital / Physical) */
-.page-shop .premium-product-badge{
-  background: rgba(214, 168, 120, 0.92);
-  color: #ffffff;
-  border: 1px solid rgba(255,255,255,0.55);
+/* Blog Post Styles */
+.blog-post-hero {
+    width: 100%;
+    aspect-ratio: 21/9;
+    background: linear-gradient(135deg, 
+        rgba(232, 218, 218, 0.3) 0%, 
+        rgba(218, 165, 152, 0.2) 50%, 
+        rgba(232, 218, 218, 0.3) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(218, 165, 152, 0.15);
 }
 
-/* ================================
-   Apparel Consulting Page Background ONLY
-   ================================ */
-.page-apparel-consulting {
-  background:
-    radial-gradient(1200px 600px at 50% 0%,
-      rgba(214, 168, 120, 0.14),
-      rgba(255, 255, 255, 0) 60%),
-    linear-gradient(180deg,
-      rgba(255, 252, 248, 1) 0%,
-      rgba(255, 250, 244, 1) 40%,
-      rgba(255, 255, 255, 1) 100%);
-  padding-top: 24px;
+.blog-post-hero span {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 1.25rem;
+    color: #d4a574;
+    font-style: italic;
 }
 
-/* ================================
-   Blogs Page Background ONLY
-   ================================ */
-.page-blogs {
-  background:
-    radial-gradient(1100px 520px at 50% 0%,
-      rgba(214, 168, 120, 0.14),
-      rgba(255, 255, 255, 0) 62%),
-    radial-gradient(900px 420px at 15% 35%,
-      rgba(214, 168, 120, 0.08),
-      rgba(255, 255, 255, 0) 65%),
-    radial-gradient(900px 420px at 85% 55%,
-      rgba(255, 255, 255, 0.65),
-      rgba(255, 255, 255, 0) 60%),
-    linear-gradient(180deg,
-      rgba(255, 252, 248, 1) 0%,
-      rgba(255, 250, 244, 1) 45%,
-      rgba(255, 255, 255, 1) 100%);
-  padding-top: 24px;
+.blog-post-content {
+    background: #ffffff;
+    padding: 4rem 2rem;
 }
 
-/* ================================
-   Blog Post Page: Morning Rituals ONLY
-   Scope: .page-blog-morning
-   ================================ */
-
-.page-blog-morning {
-  background:
-    radial-gradient(1000px 520px at 50% 0%,
-      rgba(214, 168, 120, 0.14),
-      rgba(255, 255, 255, 0) 62%),
-    radial-gradient(900px 420px at 18% 40%,
-      rgba(214, 168, 120, 0.08),
-      rgba(255, 255, 255, 0) 65%),
-    linear-gradient(180deg,
-      rgba(255, 252, 248, 1) 0%,
-      rgba(255, 250, 244, 1) 55%,
-      rgba(255, 255, 255, 1) 100%);
-  padding: 28px 0 70px;
+.blog-post-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.page-blog-morning .blog-article {
-  max-width: 920px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(214, 168, 120, 0.22);
-  border-radius: 18px;
-  box-shadow: 0 12px 34px rgba(0,0,0,0.06);
-  padding: 44px 44px 40px;
-  backdrop-filter: blur(6px);
+.back-to-blogs {
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #d4a574;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
 }
 
-@media (max-width: 980px) {
-  .page-blog-morning .blog-article {
-    margin: 0 18px;
-    padding: 32px 22px 28px;
-  }
+.back-to-blogs:hover {
+    color: #c49463;
+    transform: translateX(-4px);
 }
 
-.page-blog-morning .blog-article h1 {
-  font-size: clamp(34px, 4.2vw, 52px);
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  margin: 0 0 14px;
+.post-category {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #d4a574;
+    display: block;
+    margin-bottom: 1rem;
 }
 
-.page-blog-morning .blog-article h2 {
-  font-size: clamp(22px, 2.2vw, 30px);
-  line-height: 1.22;
-  margin-top: 28px;
-  margin-bottom: 10px;
+.post-title {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
-.page-blog-morning .blog-article p,
-.page-blog-morning .blog-article li {
-  font-size: 17px;
-  line-height: 1.78;
-  color: rgba(32, 30, 28, 0.86);
+.post-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.9rem;
+    color: #8a8a8a;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(218, 165, 152, 0.15);
 }
 
-.page-blog-morning .blog-article ul,
-.page-blog-morning .blog-article ol {
-  padding-left: 20px;
-  margin: 14px 0 18px;
+.post-date,
+.post-read-time {
+    display: inline-block;
 }
 
-.page-blog-morning .blog-article a {
-  color: rgba(176, 120, 68, 0.95);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.post-paragraph {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #3a3a3a;
+    margin-bottom: 1.5rem;
 }
 
-.page-blog-morning .blog-article hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(90deg,
-    rgba(214,168,120,0),
-    rgba(214,168,120,0.45),
-    rgba(214,168,120,0));
-  margin: 22px 0;
+.post-highlight {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #d4a574;
+    line-height: 1.7;
+    margin: 2.5rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(218, 165, 152, 0.2);
+    border-bottom: 1px solid rgba(218, 165, 152, 0.2);
+    text-align: center;
 }
 
-.page-blog-morning .blog-article blockquote {
-  margin: 18px 0;
-  padding: 14px 18px;
-  border-left: 3px solid rgba(214,168,120,0.55);
-  background: rgba(255, 248, 240, 0.6);
-  border-radius: 10px;
+.post-subheading {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
 }
 
-/* If the page has a post meta line like date/category, keep it subtle */
-.page-blog-morning .post-meta,
-.page-blog-morning .blog-meta {
-  color: rgba(32, 30, 28, 0.58);
-  font-size: 14px;
-  margin-bottom: 18px;
+/* Blogs Responsive */
+@media (max-width: 768px) {
+    .blogs-hero {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .blogs-title {
+        font-size: 2.25rem;
+    }
+
+    .blogs-subtitle {
+        font-size: 1rem;
+    }
+
+    .featured-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .blog-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .blog-card-content {
+        padding: 1.75rem;
+    }
+
+    .blog-card-title {
+        font-size: 1.35rem;
+    }
+
+    .blog-post-hero {
+        aspect-ratio: 16/9;
+    }
+
+    .blog-post-content {
+        padding: 3rem 1.5rem;
+    }
+
+    .post-title {
+        font-size: 2.25rem;
+    }
+
+    .post-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .post-paragraph {
+        font-size: 1rem;
+    }
+
+    .post-highlight {
+        font-size: 1.15rem;
+        margin: 2rem 0;
+        padding: 1.5rem 0;
+    }
+
+    .post-subheading {
+        font-size: 1.65rem;
+        margin-top: 2.5rem;
+    }
 }
 
-/* Make any top hero/title area breathe without touching shared layouts */
-.page-blog-morning .page-header,
-.page-blog-morning .blog-header,
-.page-blog-morning header {
-  margin-bottom: 18px;
+@media (max-width: 480px) {
+    .blogs-hero {
+        padding: 2.5rem 1rem 1.5rem;
+    }
+
+    .blogs-title {
+        font-size: 1.85rem;
+    }
+
+    .featured-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .blog-card-content {
+        padding: 1.5rem;
+    }
+
+    .blog-card-title {
+        font-size: 1.25rem;
+    }
+
+    .blog-card-excerpt {
+        font-size: 0.9rem;
+    }
+
+    .blog-post-hero {
+        aspect-ratio: 4/3;
+    }
+
+    .blog-post-hero span {
+        font-size: 1rem;
+    }
+
+    .blog-post-content {
+        padding: 2.5rem 1rem;
+    }
+
+    .post-title {
+        font-size: 1.85rem;
+    }
+
+    .post-paragraph {
+        font-size: 0.95rem;
+    }
+
+    .post-highlight {
+        font-size: 1.05rem;
+        margin: 1.5rem 0;
+        padding: 1.25rem 0;
+    }
+
+    .post-subheading {
+        font-size: 1.45rem;
+        margin-top: 2rem;
+    }
+}
+
+/* ═══════════════════════════════════════════════════
+   HERO HEADLINE SECTION
+═══════════════════════════════════════════════════ */
+.hero-headline-section {
+    background: #ffffff;
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(218, 165, 152, 0.15);
+}
+
+.hero-headline-container {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.hero-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #d4a574;
+    margin-bottom: 1.5rem;
+}
+
+.hero-headline {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 3.6rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    line-height: 1.18;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subheadline {
+    font-size: 1.05rem;
+    color: #5a5a5a;
+    line-height: 1.75;
+    margin-bottom: 2.8rem;
+    font-style: italic;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* CTA Buttons — shared system */
+.cta-btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-btn--primary {
+    background: linear-gradient(135deg, #d4a574, #c08060);
+    color: #ffffff;
+    box-shadow: 0 4px 18px rgba(212, 165, 116, 0.35);
+}
+.cta-btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(212, 165, 116, 0.45);
+}
+
+.cta-btn--secondary {
+    background: #ffffff;
+    color: #d4a574;
+    border: 1.5px solid #d4a574;
+}
+.cta-btn--secondary:hover {
+    background: rgba(212, 165, 116, 0.06);
+    transform: translateY(-2px);
+}
+
+.cta-btn--ghost {
+    background: transparent;
+    color: #5a5a5a;
+    border: 1.5px solid rgba(90, 90, 90, 0.3);
+}
+.cta-btn--ghost:hover {
+    border-color: #d4a574;
+    color: #d4a574;
+}
+
+.cta-btn--light {
+    background: rgba(255,255,255,0.15);
+    color: #ffffff;
+    border: 1.5px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(4px);
+}
+.cta-btn--light:hover {
+    background: rgba(255,255,255,0.28);
+    transform: translateY(-2px);
+}
+
+.cta-btn--ghost-dark {
+    background: transparent;
+    color: #d4a574;
+    border: 1.5px solid rgba(212, 165, 116, 0.5);
+}
+.cta-btn--ghost-dark:hover {
+    background: rgba(212, 165, 116, 0.08);
+}
+
+/* Welcome pillars */
+.welcome-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(218, 165, 152, 0.2);
+}
+
+.pillar-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: #3a3a3a;
+    line-height: 1.6;
+}
+
+.pillar-icon {
+    color: #d4a574;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ═══════════════════════════════════════════════════
+   TRANSFORMATION BANNER
+═══════════════════════════════════════════════════ */
+.transformation-banner {
+    background: linear-gradient(135deg, #2a1a14 0%, #3d2218 50%, #2a1a14 100%);
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.transformation-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a574' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.transformation-container {
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.transformation-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #d4a574;
+    margin-bottom: 1.2rem;
+}
+
+.transformation-title {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+    line-height: 1.3;
+}
+
+.transformation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.transformation-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.88);
+    font-style: italic;
+    font-family: 'Georgia', 'Garamond', serif;
+}
+
+.transformation-dot {
+    color: #d4a574;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════════
+   SOCIAL PROOF / TESTIMONIALS
+═══════════════════════════════════════════════════ */
+.social-proof-section {
+    background: #faf8f6;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.social-proof-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.social-proof-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #d4a574;
+    margin-bottom: 1rem;
+}
+
+.social-proof-title {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 3.5rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    border: 1px solid rgba(218, 165, 152, 0.18);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 1.2rem;
+    left: 1.8rem;
+    font-family: 'Georgia', serif;
+    font-size: 4rem;
+    color: rgba(212, 165, 116, 0.2);
+    line-height: 1;
+}
+
+.testimonial-text {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 0.98rem;
+    font-style: italic;
+    color: #3a3a3a;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #d4a574;
+    text-transform: uppercase;
+}
+
+/* ═══════════════════════════════════════════════════
+   CLOSING BANNER
+═══════════════════════════════════════════════════ */
+.closing-banner {
+    background: linear-gradient(135deg,
+        rgba(232, 218, 218, 0.25) 0%,
+        rgba(218, 165, 152, 0.18) 50%,
+        rgba(232, 218, 218, 0.25) 100%
+    );
+    padding: 6rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(218, 165, 152, 0.2);
+}
+
+.closing-container {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.closing-headline {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+}
+
+.closing-body {
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 1.35rem;
+    color: #3a3a3a;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+}
+
+.closing-tagline {
+    font-size: 0.88rem;
+    color: #d4a574;
+    letter-spacing: 0.08em;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE — NEW SECTIONS
+═══════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-headline { font-size: 2.4rem; }
+    .hero-subheadline br { display: none; }
+    .transformation-title { font-size: 1.9rem; }
+    .transformation-grid { grid-template-columns: 1fr; }
+    .closing-headline { font-size: 2rem; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .social-proof-title { font-size: 1.9rem; }
+}
+
+@media (max-width: 480px) {
+    .hero-headline { font-size: 2rem; }
+    .hero-cta-group { flex-direction: column; align-items: center; }
+    .cta-btn { width: 100%; text-align: center; }
 }
