@@ -111,7 +111,7 @@
 }
 
 .products-page .premium-product-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.1rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -140,7 +140,7 @@
 
 /* PRODUCT CTA - Pinned to Bottom, Always Clickable */
 .products-page .premium-product-cta {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.85rem;
     font-weight: 500;
     padding: 0.65rem 1.25rem;
@@ -258,7 +258,7 @@
 }
 
 .products-page .premium-overlay-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.15rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -387,7 +387,7 @@
 }
 
 .products-page .product-subtitle {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.1rem;
     font-style: italic;
     color: #8a7a6a;
@@ -403,7 +403,7 @@
 }
 
 .products-page .product-includes-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.95rem;
     font-weight: 600;
     color: #1a1a1a;

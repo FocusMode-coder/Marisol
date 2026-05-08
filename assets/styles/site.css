@@ -71,7 +71,7 @@ a:not([class]):hover {
 
 /* Typography */
 .page-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 3rem;
     font-weight: 400;
     color: var(--color-text);
@@ -81,7 +81,7 @@ a:not([class]):hover {
 }
 
 .page-subtitle {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.1rem;
     color: var(--color-text-light);
     text-align: center;
@@ -90,7 +90,7 @@ a:not([class]):hover {
 }
 
 .section-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 2rem;
     font-weight: 400;
     color: var(--color-text);
@@ -118,7 +118,7 @@ a:not([class]):hover {
 }
 
 .text-highlight {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.25rem;
     font-style: italic;
     color: var(--color-accent);
@@ -159,7 +159,7 @@ a:not([class]):hover {
 }
 
 .card-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--color-text);
@@ -230,7 +230,7 @@ a:not([class]):hover {
 .form-textarea,
 .form-select,
 .form-file {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1rem;
     color: var(--color-text);
     padding: 0.875rem 1.25rem;
@@ -311,7 +311,7 @@ a:not([class]):hover {
 
 /* Buttons */
 .btn {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.05em;
@@ -359,7 +359,7 @@ a:not([class]):hover {
 
 #products-page .shop-title,
 #products-page .page-header-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 3rem;
     font-weight: 400;
     color: var(--color-text);
@@ -486,7 +486,7 @@ a:not([class]):hover {
 }
 
 #products-page .product-placeholder span {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.1rem;
     color: var(--color-accent);
     font-style: italic;
@@ -518,7 +518,7 @@ a:not([class]):hover {
 }
 
 #products-page .product-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 2rem;
     font-weight: 400;
     color: var(--color-text);
@@ -562,7 +562,7 @@ a:not([class]):hover {
 }
 
 #products-page .price-amount {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 2.5rem;
     font-weight: 400;
     color: var(--color-text);
@@ -680,7 +680,7 @@ a:not([class]):hover {
 }
 
 #products-page .product-placeholder-small span {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.95rem;
     color: var(--color-accent);
     font-style: italic;
@@ -692,7 +692,7 @@ a:not([class]):hover {
 }
 
 #products-page .product-card-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.35rem;
     font-weight: 400;
     color: var(--color-text);
@@ -729,7 +729,7 @@ a:not([class]):hover {
 }
 
 #products-page .section-title-products {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 2.5rem;
     font-weight: 400;
     color: var(--color-text);
@@ -829,7 +829,7 @@ a:not([class]):hover {
 }
 
 #products-page .modal-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 2rem;
     font-weight: 400;
     color: var(--color-text);

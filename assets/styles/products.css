@@ -11,7 +11,7 @@
 }
 
 .page-products #products-page .shop-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 3rem;
     font-weight: 400;
     color: var(--color-text);

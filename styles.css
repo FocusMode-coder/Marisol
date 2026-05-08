@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'EB Garamond', 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 body {
-    font-family: 'EB Garamond', 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     background-color: #ffffff;
 }
 
@@ -261,7 +261,7 @@ body {
 }
 
 .welcome-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 2.5rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -270,21 +270,21 @@ body {
 }
 
 .welcome-body {
-    font-family: 'Georgia', 'Garamond', serif;
-    font-size: 1rem;
-    line-height: 1.8;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
     color: #3a3a3a;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.85rem;
 }
 
 .welcome-highlight {
-    font-family: 'Georgia', 'Garamond', serif;
-    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.05rem;
     font-style: italic;
     color: #d4a574;
     line-height: 1.6;
-    margin: 2rem 0;
-    padding: 1.5rem 0;
+    margin: 1rem 0;
+    padding: 0.85rem 0;
     border-top: 1px solid rgba(218, 165, 152, 0.2);
     border-bottom: 1px solid rgba(218, 165, 152, 0.2);
 }
@@ -311,7 +311,7 @@ body {
 }
 
 .image-placeholder span {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.1rem;
     color: #d4a574;
     font-style: italic;
@@ -382,7 +382,7 @@ body {
 }
 
 .pathways-label {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.2em;
@@ -393,7 +393,7 @@ body {
 }
 
 .pathways-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 2.75rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -402,7 +402,7 @@ body {
 }
 
 .pathways-subtitle {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.1rem;
     color: #5a5a5a;
     font-style: italic;
@@ -492,7 +492,7 @@ body {
 }
 
 .card-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.5rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -503,7 +503,7 @@ body {
 }
 
 .card-description {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.95rem;
     line-height: 1.6;
     color: #5a5a5a;
@@ -511,7 +511,7 @@ body {
 }
 
 .card-link {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.05em;
@@ -703,7 +703,7 @@ body {
 }
 
 .feature-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.85rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -713,7 +713,7 @@ body {
 }
 
 .feature-description {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1rem;
     line-height: 1.7;
     color: #5a5a5a;
@@ -721,7 +721,7 @@ body {
 }
 
 .feature-link {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.05em;
@@ -831,7 +831,7 @@ body {
 }
 
 .footer-link {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -863,7 +863,7 @@ body {
 }
 
 .footer-copyright {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.75rem;
     color: #7a7a7a;
     text-align: center;
@@ -885,7 +885,7 @@ body {
 }
 
 .page-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 3rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -895,7 +895,7 @@ body {
 }
 
 .page-subtitle {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.1rem;
     color: #5a5a5a;
     text-align: center;
@@ -929,7 +929,7 @@ body {
 }
 
 .form-label {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.9rem;
     font-weight: 500;
     color: #2a2a2a;
@@ -940,7 +940,7 @@ body {
 .form-input,
 .form-textarea,
 .form-select {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1rem;
     color: #2a2a2a;
     padding: 0.875rem 1.25rem;
@@ -965,7 +965,7 @@ body {
 }
 
 .btn {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.05em;
@@ -998,7 +998,7 @@ body {
 }
 
 .about-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 3rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -1007,7 +1007,7 @@ body {
 }
 
 .about-subtitle {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.1rem;
     color: #5a5a5a;
     font-style: italic;
@@ -1028,7 +1028,7 @@ body {
 }
 
 .about-section-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 2rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -1037,7 +1037,7 @@ body {
 }
 
 .about-text {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1rem;
     line-height: 1.8;
     color: #3a3a3a;
@@ -1045,7 +1045,7 @@ body {
 }
 
 .about-highlight {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.1rem;
     font-style: italic;
     color: #d4a574;
@@ -1143,7 +1143,7 @@ body {
 }
 
 .blogs-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 3rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -1152,7 +1152,7 @@ body {
 }
 
 .blogs-subtitle {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.1rem;
     color: #5a5a5a;
     font-style: italic;
@@ -1169,7 +1169,7 @@ body {
 }
 
 .section-label {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.2em;
@@ -1219,7 +1219,7 @@ body {
 }
 
 .blog-card-image span {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.95rem;
     color: #d4a574;
     font-style: italic;
@@ -1233,7 +1233,7 @@ body {
 }
 
 .blog-category {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -1243,7 +1243,7 @@ body {
 }
 
 .blog-card-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.5rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -1252,7 +1252,7 @@ body {
 }
 
 .blog-card-excerpt {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.95rem;
     line-height: 1.6;
     color: #5a5a5a;
@@ -1269,7 +1269,7 @@ body {
 }
 
 .read-more {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.9rem;
     font-weight: 500;
     color: #d4a574;
@@ -1296,7 +1296,7 @@ body {
 }
 
 .blog-post-hero span {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.25rem;
     color: #d4a574;
     font-style: italic;
@@ -1314,7 +1314,7 @@ body {
 
 .back-to-blogs {
     display: inline-block;
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.9rem;
     font-weight: 500;
     color: #d4a574;
@@ -1329,7 +1329,7 @@ body {
 }
 
 .post-category {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.15em;
@@ -1340,7 +1340,7 @@ body {
 }
 
 .post-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 3rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -1351,7 +1351,7 @@ body {
 .post-meta {
     display: flex;
     gap: 1.5rem;
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.9rem;
     color: #8a8a8a;
     margin-bottom: 3rem;
@@ -1365,7 +1365,7 @@ body {
 }
 
 .post-paragraph {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.05rem;
     line-height: 1.8;
     color: #3a3a3a;
@@ -1373,7 +1373,7 @@ body {
 }
 
 .post-highlight {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.25rem;
     font-style: italic;
     color: #d4a574;
@@ -1386,7 +1386,7 @@ body {
 }
 
 .post-subheading {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 2rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -1542,7 +1542,7 @@ body {
 }
 
 .hero-headline {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 3.6rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -1689,7 +1689,7 @@ body {
 }
 
 .transformation-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 2.4rem;
     font-weight: 400;
     color: #ffffff;
@@ -1712,7 +1712,7 @@ body {
     font-size: 1.05rem;
     color: rgba(255,255,255,0.88);
     font-style: italic;
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 .transformation-dot {
@@ -1745,7 +1745,7 @@ body {
 }
 
 .social-proof-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 2.4rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -1780,7 +1780,7 @@ body {
 }
 
 .testimonial-text {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.98rem;
     font-style: italic;
     color: #3a3a3a;
@@ -1818,7 +1818,7 @@ body {
 }
 
 .closing-headline {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 2.8rem;
     font-weight: 400;
     color: #1a1a1a;
@@ -1826,7 +1826,7 @@ body {
 }
 
 .closing-body {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.35rem;
     color: #3a3a3a;
     margin-bottom: 0.8rem;
@@ -1905,7 +1905,7 @@ body {
 }
 
 .goddess-portrait-label {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.25rem;
     color: #c49463;
     letter-spacing: 0.12em;
@@ -1930,7 +1930,7 @@ body {
 }
 
 .sales-intro-lead {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(2rem, 4vw, 2.75rem);
     color: #2a1a14;
     font-weight: 400;
@@ -1946,7 +1946,7 @@ body {
 }
 
 .sales-intro-accent {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.5rem;
     color: #d4a574;
     font-style: italic;
@@ -1954,7 +1954,7 @@ body {
 }
 
 .sales-intro-closing {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.6rem;
     color: #2a1a14;
     font-weight: 400;
@@ -1986,7 +1986,7 @@ body {
 }
 
 .instagram-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(1.75rem, 3.5vw, 2.5rem);
     font-weight: 400;
     color: #faf8f6;
@@ -2064,7 +2064,7 @@ body {
 }
 
 .collab-wide-btn-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.2rem;
     font-weight: 400;
     color: #2a1a14;
@@ -2118,7 +2118,7 @@ body {
 }
 
 .reviews-title {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(1.75rem, 3vw, 2.5rem);
     font-weight: 400;
     color: #2a1a14;
