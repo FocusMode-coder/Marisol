@@ -1564,7 +1564,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* CTA Buttons — shared system */
+/* CTA Buttons shared system */
 .cta-btn {
     display: inline-block;
     padding: 0.9rem 2rem;
@@ -1841,7 +1841,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════
-   RESPONSIVE — NEW SECTIONS
+   RESPONSIVE NEW SECTIONS
 ═══════════════════════════════════════════════════ */
 @media (max-width: 900px) {
     .testimonials-grid {
@@ -2001,7 +2001,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════
-   RESPONSIVE — ADDITIONAL
+   RESPONSIVE ADDITIONAL
 ═══════════════════════════════════════════════════ */
 @media (max-width: 768px) {
     .sales-intro-banner { padding: 4rem 1.5rem; }
