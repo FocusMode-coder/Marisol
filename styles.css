@@ -1855,7 +1855,7 @@ body {
     .hero-subheadline br { display: none; }
     .transformation-title { font-size: 1.9rem; }
     .transformation-grid { grid-template-columns: 1fr; }
-    .closing-headline { font-size: 2rem; }
+    .closing-headline { font-size: 1.5rem; }
     .testimonials-grid { grid-template-columns: 1fr; }
     .social-proof-title { font-size: 1.9rem; }
 }
