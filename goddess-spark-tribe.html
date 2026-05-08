@@ -558,6 +558,142 @@
                 align-items: flex-start;
             }
         }
+
+        /* ── Podcast Player ── */
+        .podcast-player-wrap {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            background: #fffaf7;
+            border: 1px solid rgba(212,165,116,0.18);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .vinyl-wrap {
+            position: relative;
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+        }
+
+        .vinyl {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+        }
+
+        .vinyl.spinning {
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+
+        .vinyl-needle {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            width: 3px;
+            height: 60px;
+            background: linear-gradient(to bottom, #d4a574, #8b5e3c);
+            border-radius: 2px;
+            transform-origin: top center;
+            transform: rotate(28deg);
+        }
+
+        .podcast-info {
+            flex: 1;
+        }
+
+        .podcast-ep-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #d4a574;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .podcast-ep-title {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #2a1a14;
+            margin-bottom: 0.75rem;
+        }
+
+        .podcast-ep-desc {
+            font-size: 0.95rem;
+            color: #6a5a52;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .podcast-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .podcast-play-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4a574, #c08060);
+            border: none;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 14px rgba(212,165,116,0.4);
+        }
+
+        .podcast-play-btn:hover { transform: scale(1.08); }
+
+        .podcast-progress-wrap {
+            flex: 1;
+        }
+
+        .podcast-progress {
+            width: 100%;
+            -webkit-appearance: none;
+            height: 4px;
+            border-radius: 2px;
+            background: rgba(212,165,116,0.25);
+            outline: none;
+            cursor: pointer;
+        }
+
+        .podcast-progress::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #d4a574;
+            cursor: pointer;
+        }
+
+        .podcast-time {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            color: #9a8a82;
+            margin-top: 0.4rem;
+        }
+
+        @media (max-width: 640px) {
+            .podcast-player-wrap { flex-direction: column; text-align: center; }
+            .podcast-controls { justify-content: center; }
+        }
     </style>
 </head>
 <body class="gst-page">
@@ -588,20 +724,52 @@
     <!-- Main Content -->
     <main class="gst-container">
         
-        <!-- Latest Episode Section with YouTube Player -->
+        <!-- Latest Episode Section with Audio Player -->
         <section class="gst-section">
             <h2>Latest Episode</h2>
-            <div class="gst-player-wrapper">
-                <iframe 
-                    src="https://www.youtube.com/embed/VIDEO_ID" 
-                    title="Latest Episode"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+
+            <div class="podcast-player-wrap">
+                <!-- Spinning vinyl visual -->
+                <div class="vinyl-wrap">
+                    <div class="vinyl" id="vinylDisc">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="100" fill="#1a100a"/>
+                            <circle cx="100" cy="100" r="85" fill="none" stroke="#2e1a10" stroke-width="1.5"/>
+                            <circle cx="100" cy="100" r="72" fill="none" stroke="#2e1a10" stroke-width="1"/>
+                            <circle cx="100" cy="100" r="59" fill="none" stroke="#2e1a10" stroke-width="1"/>
+                            <circle cx="100" cy="100" r="46" fill="none" stroke="#2e1a10" stroke-width="1"/>
+                            <circle cx="100" cy="100" r="33" fill="#d4a574"/>
+                            <circle cx="100" cy="100" r="24" fill="#c49463"/>
+                            <circle cx="100" cy="100" r="12" fill="#1a100a"/>
+                            <circle cx="100" cy="100" r="5" fill="#d4a574"/>
+                            <!-- Gold shimmer lines -->
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(212,165,116,0.12)" stroke-width="0.8"/>
+                            <circle cx="100" cy="100" r="65" fill="none" stroke="rgba(212,165,116,0.10)" stroke-width="0.8"/>
+                        </svg>
+                    </div>
+                    <div class="vinyl-needle"></div>
+                </div>
+
+                <!-- Episode info + audio controls -->
+                <div class="podcast-info">
+                    <p class="podcast-ep-label">Episode 1</p>
+                    <h3 class="podcast-ep-title">Reclaiming Your Power</h3>
+                    <p class="podcast-ep-desc">An honest conversation about stepping into alignment, healing, and becoming the woman you were always meant to be.</p>
+                    <audio id="podcastAudio" src="/assets/audio/episode-01.mp3" preload="metadata"></audio>
+                    <div class="podcast-controls">
+                        <button class="podcast-play-btn" id="playBtn" aria-label="Play / Pause">
+                            <span id="playIcon">&#9654;</span>
+                        </button>
+                        <div class="podcast-progress-wrap">
+                            <input type="range" class="podcast-progress" id="progressBar" value="0" min="0" max="100" step="0.1">
+                            <div class="podcast-time">
+                                <span id="currentTime">0:00</span>
+                                <span id="duration">--:--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="gst-btn gst-btn-center">
-                Watch on YouTube
-            </a>
         </section>
 
         <!-- Recent Episodes Section -->
@@ -754,6 +922,56 @@
             document.getElementById('success-message').style.display = 'block';
             document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
+    </script>
+
+    <script>
+        const audio = document.getElementById('podcastAudio');
+        const playBtn = document.getElementById('playBtn');
+        const playIcon = document.getElementById('playIcon');
+        const progressBar = document.getElementById('progressBar');
+        const currentTimeEl = document.getElementById('currentTime');
+        const durationEl = document.getElementById('duration');
+        const vinyl = document.getElementById('vinylDisc');
+
+        function fmt(s) {
+            const m = Math.floor(s / 60);
+            const sec = Math.floor(s % 60);
+            return m + ':' + (sec < 10 ? '0' : '') + sec;
+        }
+
+        audio.addEventListener('loadedmetadata', () => {
+            durationEl.textContent = fmt(audio.duration);
+        });
+
+        playBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playIcon.innerHTML = '&#10074;&#10074;';
+                vinyl.classList.add('spinning');
+            } else {
+                audio.pause();
+                playIcon.innerHTML = '&#9654;';
+                vinyl.classList.remove('spinning');
+            }
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            if (audio.duration) {
+                progressBar.value = (audio.currentTime / audio.duration) * 100;
+                currentTimeEl.textContent = fmt(audio.currentTime);
+            }
+        });
+
+        progressBar.addEventListener('input', () => {
+            audio.currentTime = (progressBar.value / 100) * audio.duration;
+        });
+
+        audio.addEventListener('ended', () => {
+            playIcon.innerHTML = '&#9654;';
+            vinyl.classList.remove('spinning');
+            progressBar.value = 0;
+            currentTimeEl.textContent = '0:00';
+        });
     </script>
 </body>
 </html>
