@@ -1931,7 +1931,7 @@ body {
 
 .sales-intro-lead {
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
     color: #2a1a14;
     font-weight: 400;
     line-height: 1.3;
