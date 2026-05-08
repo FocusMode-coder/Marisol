@@ -81,7 +81,7 @@ a:not([class]):hover {
 }
 
 .page-subtitle {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 1.1rem;
     color: var(--color-text-light);
     text-align: center;
@@ -230,7 +230,7 @@ a:not([class]):hover {
 .form-textarea,
 .form-select,
 .form-file {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 1rem;
     color: var(--color-text);
     padding: 0.875rem 1.25rem;
@@ -311,7 +311,7 @@ a:not([class]):hover {
 
 /* Buttons */
 .btn {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.05em;

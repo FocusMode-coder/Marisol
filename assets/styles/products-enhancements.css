@@ -140,7 +140,7 @@
 
 /* PRODUCT CTA - Pinned to Bottom, Always Clickable */
 .products-page .premium-product-cta {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.85rem;
     font-weight: 500;
     padding: 0.65rem 1.25rem;

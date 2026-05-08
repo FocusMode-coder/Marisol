@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     background-color: #ffffff;
 }
 
@@ -269,7 +269,7 @@ body {
 }
 
 .welcome-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 1rem;
     line-height: 1.8;
     color: #3a3a3a;
@@ -381,7 +381,7 @@ body {
 }
 
 .pathways-label {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.2em;
@@ -401,7 +401,7 @@ body {
 }
 
 .pathways-subtitle {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 1.1rem;
     color: #5a5a5a;
     font-style: italic;
@@ -502,7 +502,7 @@ body {
 }
 
 .card-description {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.95rem;
     line-height: 1.6;
     color: #5a5a5a;
@@ -510,7 +510,7 @@ body {
 }
 
 .card-link {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.05em;
@@ -712,7 +712,7 @@ body {
 }
 
 .feature-description {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 1rem;
     line-height: 1.7;
     color: #5a5a5a;
@@ -720,7 +720,7 @@ body {
 }
 
 .feature-link {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.05em;
@@ -830,7 +830,7 @@ body {
 }
 
 .footer-link {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -862,7 +862,7 @@ body {
 }
 
 .footer-copyright {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.75rem;
     color: #7a7a7a;
     text-align: center;
@@ -894,7 +894,7 @@ body {
 }
 
 .page-subtitle {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 1.1rem;
     color: #5a5a5a;
     text-align: center;
@@ -928,7 +928,7 @@ body {
 }
 
 .form-label {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.9rem;
     font-weight: 500;
     color: #2a2a2a;
@@ -939,7 +939,7 @@ body {
 .form-input,
 .form-textarea,
 .form-select {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 1rem;
     color: #2a2a2a;
     padding: 0.875rem 1.25rem;
@@ -964,7 +964,7 @@ body {
 }
 
 .btn {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.05em;
@@ -1006,7 +1006,7 @@ body {
 }
 
 .about-subtitle {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 1.1rem;
     color: #5a5a5a;
     font-style: italic;
@@ -1036,7 +1036,7 @@ body {
 }
 
 .about-text {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 1rem;
     line-height: 1.8;
     color: #3a3a3a;
@@ -1151,7 +1151,7 @@ body {
 }
 
 .blogs-subtitle {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 1.1rem;
     color: #5a5a5a;
     font-style: italic;
@@ -1168,7 +1168,7 @@ body {
 }
 
 .section-label {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.2em;
@@ -1232,7 +1232,7 @@ body {
 }
 
 .blog-category {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -1251,7 +1251,7 @@ body {
 }
 
 .blog-card-excerpt {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.95rem;
     line-height: 1.6;
     color: #5a5a5a;
@@ -1268,7 +1268,7 @@ body {
 }
 
 .read-more {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.9rem;
     font-weight: 500;
     color: #d4a574;
@@ -1313,7 +1313,7 @@ body {
 
 .back-to-blogs {
     display: inline-block;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.9rem;
     font-weight: 500;
     color: #d4a574;
@@ -1328,7 +1328,7 @@ body {
 }
 
 .post-category {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.15em;
@@ -1350,7 +1350,7 @@ body {
 .post-meta {
     display: flex;
     gap: 1.5rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 0.9rem;
     color: #8a8a8a;
     margin-bottom: 3rem;
@@ -1364,7 +1364,7 @@ body {
 }
 
 .post-paragraph {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     font-size: 1.05rem;
     line-height: 1.8;
     color: #3a3a3a;
