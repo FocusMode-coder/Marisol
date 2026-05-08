@@ -31,7 +31,40 @@
         .about-hero {
             margin-bottom: 5rem;
         }
-        
+
+        /* Top grid: text left, photo right */
+        .about-top-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: start;
+            margin-bottom: 2.5rem;
+        }
+
+        .about-top-text {
+            padding-top: 0.5rem;
+        }
+
+        .about-top-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            display: block;
+        }
+
+        /* Full-width text below photo */
+        .about-full-text {
+            width: 100%;
+        }
+
+        .about-bio-p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #5a5a5a;
+            margin-bottom: 1.5rem;
+        }
+
         .about-hero-container {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
@@ -235,40 +268,33 @@
             #about-page {
                 padding: 5rem 1.5rem 3rem;
             }
-            
+
             .about-hero {
                 margin-bottom: 3.5rem;
             }
-            
+
+            .about-top-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-top-image {
+                max-width: 360px;
+                margin: 0 auto;
+            }
+
+            .about-bio-p {
+                font-size: 1rem;
+            }
+
             .about-hero-container {
                 grid-template-columns: 1fr;
                 gap: 2.5rem;
             }
-            
-            .about-hero-image {
-                position: relative;
-                top: 0;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-            
-            .about-name {
-                font-size: 2rem;
-            }
-            
-            .about-title {
-                font-size: 0.875rem;
-                margin-bottom: 2rem;
-            }
-            
-            .about-bio p,
-            .about-bio li {
-                font-size: 1rem;
-            }
-            
+
             .about-quote {
                 padding: 1.5rem 1.75rem;
-                font-size: 1.1rem;
+                font-size: 1.05rem;
                 margin-top: 2rem;
             }
             
@@ -322,32 +348,34 @@
     <main id="about-page">
         <!-- Hero Section -->
         <section class="about-hero">
-            <div class="about-hero-container">
-                <div class="about-hero-image">
-                    <img src="/assets/images/bio/marisol-about.png" alt="Marisol Moran - Founder & Creative Director" class="about-portrait" loading="eager">
+            <!-- Top: first paragraph left, photo right -->
+            <div class="about-top-grid">
+                <div class="about-top-text">
+                    <p class="about-bio-p">Marisol Moran is a fashion creative, mental health advocate, psychology enthusiast, and business strategist passionate about fashion, wellness, personal growth, and helping women elevate their lives.</p>
+
+                    <p class="about-bio-p">As a first-generation Mexican-American college graduate, Marisol was raised with strong values rooted in ambition, humility, kindness, resilience, and hard work. She was taught to dream big, support others, and build a meaningful life while staying connected to the people she loves most. Those values became the foundation of both her personal journey and the purpose behind everything she creates.</p>
+
+                    <p class="about-bio-p">Growing up through difficult life experiences and challenges sparked a deep curiosity and passion for understanding the human mind, emotional healing, and personal transformation. That passion ultimately led her to create work centered around helping women heal, grow, and reconnect with their confidence and inner strength.</p>
                 </div>
-                <div class="about-hero-content">
-                    <div class="about-bio">
-                        <p>Marisol Moran is a fashion creative, mental health advocate, psychology enthusiast, and business strategist passionate about fashion, wellness, personal growth, and helping women elevate their lives.</p>
+                <div class="about-top-image">
+                    <img src="/assets/images/bio/marisol-about.png" alt="Marisol Moran" class="about-portrait" loading="eager">
+                </div>
+            </div>
 
-                        <p>As a first-generation Mexican-American college graduate, Marisol was raised with strong values rooted in ambition, humility, kindness, resilience, and hard work. She was taught to dream big, support others, and build a meaningful life while staying connected to the people she loves most. Those values became the foundation of both her personal journey and the purpose behind everything she creates.</p>
+            <!-- Below photo: full-width remaining paragraphs -->
+            <div class="about-full-text">
+                <p class="about-bio-p">Alongside her corporate fashion career and entrepreneurial businesses, Marisol felt called to create work rooted in deeper purpose to help others. This led her to create The Goddess Spark Tribe, a space dedicated to self-development, healing, empowerment, and helping women become more confident, aligned, and fulfilled in every area of life.</p>
 
-                        <p>Growing up through difficult life experiences and challenges sparked a deep curiosity and passion for understanding the human mind, emotional healing, and personal transformation. That passion ultimately led her to create work centered around helping women heal, grow, and reconnect with their confidence and inner strength.</p>
+                <p class="about-bio-p">Driven by her love for fashion and creativity, she also founded Soul Shine Collections, built on the belief that every woman deserves an essential black dress that is unique, comfortable, and effortlessly empowering. Her curated collection was designed to help women feel confident, elegant, beautiful, and radiant during life's most meaningful moments.</p>
 
-                        <p>Alongside her corporate fashion career and entrepreneurial businesses, Marisol felt called to create work rooted in deeper purpose to help others. This led her to create The Goddess Spark Tribe, a space dedicated to self-development, healing, empowerment, and helping women become more confident, aligned, and fulfilled in every area of life.</p>
+                <p class="about-bio-p">With her creative business services, Marisol helps visionaries bring their ideas and brands to life with intention, strategy, and authenticity.</p>
 
-                        <p>Driven by her love for fashion and creativity, she also founded Soul Shine Collections, built on the belief that every woman deserves an essential black dress that is unique, comfortable, and effortlessly empowering. Her curated collection was designed to help women feel confident, elegant, beautiful, and radiant during life's most meaningful moments.</p>
+                <p class="about-bio-p">Through her brands, courses, and creative services, Marisol blends self-development, feminine empowerment, fashion, and business strategy to support women both personally and professionally in a way that feels grounded, supportive, and real.</p>
 
-                        <p>With her creative business services, Marisol helps visionaries bring their ideas and brands to life with intention, strategy, and authenticity.</p>
+                <p class="about-bio-p">Everything she creates is intentional. Every detail is designed to help women let their soul shine by empowering their mind, body, and bank account so they can live in deeper alignment with themselves, their purpose, and the people they love.</p>
 
-                        <p>Through her brands, courses, and creative services, Marisol blends self-development, feminine empowerment, fashion, and business strategy to support women both personally and professionally in a way that feels grounded, supportive, and real.</p>
-
-                        <p>Everything she creates is intentional. Every detail is designed to help women let their soul shine by empowering their mind, body, and bank account so they can live in deeper alignment with themselves, their purpose, and the people they love.</p>
-                    </div>
-
-                    <div class="about-quote">
-                        "Where Style Meets Power. This is more than a brand it is a refined ecosystem for growth."
-                    </div>
+                <div class="about-quote">
+                    "Where Style Meets Power. This is more than a brand it is a refined ecosystem for growth."
                 </div>
             </div>
         </section>
