@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'EB Garamond', 'Georgia', 'Garamond', serif;
 }
 
 body {
-    font-family: 'Georgia', 'Garamond', serif;
+    font-family: 'EB Garamond', 'Georgia', 'Garamond', serif;
     background-color: #ffffff;
 }
 
