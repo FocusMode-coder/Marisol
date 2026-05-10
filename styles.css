@@ -91,9 +91,11 @@ body {
 
 .nav-menu {
     display: flex;
-    gap: 3.5rem;
+    flex-wrap: nowrap;
+    gap: clamp(1rem, 2vw, 2.2rem);
     list-style: none;
     align-items: center;
+    white-space: nowrap;
 }
 
 .nav-link {

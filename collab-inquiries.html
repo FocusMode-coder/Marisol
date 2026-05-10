@@ -6,6 +6,66 @@
     <title>Collab Inquiries Marisol</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/assets/styles/site.css">
+    <style>
+        /* Collab Slideshow */
+        .collab-slideshow {
+            position: relative;
+            max-width: 520px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(218, 165, 152, 0.18);
+        }
+        .slideshow-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+        }
+        .slide {
+            min-width: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.82);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #b07b6b;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            transition: background 0.2s;
+            z-index: 10;
+        }
+        .slide-btn:hover { background: #fff; }
+        .slide-prev { left: 12px; }
+        .slide-next { right: 12px; }
+        .slide-dots {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 7px;
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.55);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .dot.active { background: #fff; }
+    </style>
 </head>
 <body class="page page-collab">
     <nav class="marisol-navbar">
@@ -13,6 +73,7 @@
             <ul class="nav-menu">
                 <li><a href="/index.html" class="nav-link">Home</a></li>
                 <li><a href="/products.html" class="nav-link">Shop</a></li>
+                <li><a href="/apparel-consulting.html" class="nav-link">Business Services</a></li>
                 <li><a href="/contact.html" class="nav-link">Contact</a></li>
                 <li><a href="/about.html" class="nav-link">About</a></li>
                 <li><a href="/blogs.html" class="nav-link">Blogs</a></li>
@@ -32,7 +93,25 @@
 
             <div class="section">
                 <div class="text-content">
-                    <p>Partner with Marisol to bring your brand into a space of authentic feminine luxury. Whether you're seeking curated photo content, dynamic video storytelling, or runway-style presentations, each collaboration is designed to reflect elegance, intentionality, and aligned brand values. Let's co-create content that resonates with your audience and elevates your brand's presence.</p>
+                    <p>Partner with Marisol to elevate your brand through authentic feminine luxury storytelling, high-quality content creation, and engaging social media marketing. Services include runway modeling, catalog modeling, social media Reels, professional photo content, UGC, product features, affiliate collaborations, and fashion &amp; lifestyle campaigns — all designed to increase brand visibility and create meaningful audience connection.</p>
+                    <p style="margin-top: 1rem;">Let's create elegant, intentional, and impactful content that brings your brand to life.</p>
+                </div>
+            </div>
+
+            <!-- Slideshow -->
+            <div class="section">
+                <div class="collab-slideshow">
+                    <div class="slideshow-track" id="collabTrack">
+                        <div class="slide"><img src="/assets/images/bio/maincollab.jpg" alt="Marisol Collab"></div>
+                        <div class="slide"><img src="/assets/images/bio/mainbio.jpg" alt="Marisol Bio"></div>
+                        <div class="slide"><img src="/assets/images/bio/bio 2.jpg" alt="Marisol"></div>
+                        <div class="slide"><img src="/assets/images/bio/selfie.jpg" alt="Marisol Selfie"></div>
+                        <div class="slide"><img src="/assets/images/bio/spakingtribe.jpg" alt="Marisol Tribe"></div>
+                        <div class="slide"><img src="/assets/images/bio/marisol-about.png" alt="Marisol About"></div>
+                    </div>
+                    <button class="slide-btn slide-prev" onclick="moveSlide(-1)" aria-label="Previous">&#8592;</button>
+                    <button class="slide-btn slide-next" onclick="moveSlide(1)" aria-label="Next">&#8594;</button>
+                    <div class="slide-dots" id="slideDots"></div>
                 </div>
             </div>
 
@@ -54,7 +133,7 @@
                         <div class="card-header">
                             <h3 class="card-title">4 Photos & 1 Video</h3>
                         </div>
-                        <p class="card-description">Four curated photos plus one short-form video (15-30 seconds) showcasing your brand in motion. Ideal for comprehensive social media presence.</p>
+                        <p class="card-description">Four curated photos plus one short-form video (15-60 seconds) showcasing your brand in motion. Ideal for comprehensive social media presence.</p>
                         <button class="btn btn-full" onclick="selectPackage('4 Photos & 1 Video')" style="margin-top: 1.5rem;">Select Package</button>
                     </div>
 
@@ -68,25 +147,6 @@
                 </div>
             </div>
 
-            <div class="section">
-                <h2 class="section-title">Collaboration Showcase</h2>
-                <p class="section-subtitle">A glimpse into past partnerships</p>
-
-                <div class="img-gallery">
-                    <div style="background: linear-gradient(135deg, #f5f5f5, #fafafa); border-radius: 12px; display: flex; align-items: center; justify-content: center; height: 280px; border: 1px solid rgba(218, 165, 152, 0.2);">
-                        <span style="font-size: 3rem; opacity: 0.3;">📸</span>
-                    </div>
-                    <div style="background: linear-gradient(135deg, #f5f5f5, #fafafa); border-radius: 12px; display: flex; align-items: center; justify-content: center; height: 280px; border: 1px solid rgba(218, 165, 152, 0.2);">
-                        <span style="font-size: 3rem; opacity: 0.3;">📸</span>
-                    </div>
-                    <div style="background: linear-gradient(135deg, #f5f5f5, #fafafa); border-radius: 12px; display: flex; align-items: center; justify-content: center; height: 280px; border: 1px solid rgba(218, 165, 152, 0.2);">
-                        <span style="font-size: 3rem; opacity: 0.3;">📸</span>
-                    </div>
-                    <div style="background: linear-gradient(135deg, #f5f5f5, #fafafa); border-radius: 12px; display: flex; align-items: center; justify-content: center; height: 280px; border: 1px solid rgba(218, 165, 152, 0.2);">
-                        <span style="font-size: 3rem; opacity: 0.3;">📸</span>
-                    </div>
-                </div>
-            </div>
 
             <div class="section">
                 <h2 class="section-title">Start Your Collaboration</h2>
@@ -196,6 +256,44 @@
                 selectElement.style.borderColor = '';
             }, 2000);
         }
+
+        // Slideshow
+        (function() {
+            const track = document.getElementById('collabTrack');
+            const slides = track ? track.querySelectorAll('.slide') : [];
+            const dotsContainer = document.getElementById('slideDots');
+            let current = 0;
+            let autoTimer;
+
+            if (!slides.length) return;
+
+            // Build dots
+            slides.forEach((_, i) => {
+                const d = document.createElement('div');
+                d.className = 'dot' + (i === 0 ? ' active' : '');
+                d.addEventListener('click', () => goTo(i));
+                dotsContainer.appendChild(d);
+            });
+
+            function goTo(n) {
+                current = (n + slides.length) % slides.length;
+                track.style.transform = `translateX(-${current * 100}%)`;
+                dotsContainer.querySelectorAll('.dot').forEach((d, i) => {
+                    d.classList.toggle('active', i === current);
+                });
+            }
+
+            window.moveSlide = function(dir) {
+                clearInterval(autoTimer);
+                goTo(current + dir);
+                startAuto();
+            };
+
+            function startAuto() {
+                autoTimer = setInterval(() => goTo(current + 1), 3500);
+            }
+            startAuto();
+        })();
 
         document.getElementById('collabForm').addEventListener('submit', function(e) {
             e.preventDefault();
