@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss Babe Essentials | Marisol</title>
+    <meta name="description" content="The tools, tech, and everyday essentials that help me run my businesses with intention, focus, and style.">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/assets/styles/site.css">
+    <style>
+        /* ===== SHOP PAGE ===== */
+        .page-shop {
+            background: linear-gradient(180deg, #fffaf7 0%, #fdf6f1 100%);
+            min-height: 100vh;
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #2a2a2a;
+        }
+
+        /* ===== SHOP HERO ===== */
+        .shop-hero {
+            text-align: center;
+            padding: 7rem 2rem 4rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .shop-hero-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #d4a574;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .shop-hero h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 400;
+            color: #2a1a14;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .shop-hero p {
+            font-size: 1.05rem;
+            color: #7a6a62;
+            line-height: 1.75;
+        }
+
+        /* ===== FILTER BAR ===== */
+        .shop-filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            padding: 0 2rem 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.4rem;
+            border-radius: 100px;
+            border: 1.5px solid rgba(212, 165, 116, 0.35);
+            background: transparent;
+            color: #7a6a62;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #d4a574;
+            border-color: #d4a574;
+            color: #fff;
+        }
+
+        /* ===== PRODUCT GRID ===== */
+        .shop-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        /* ===== PRODUCT CARD ===== */
+        .product-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(60, 30, 10, 0.06);
+            border: 1px solid rgba(212, 165, 116, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(212, 165, 116, 0.2);
+        }
+
+        .product-card-image {
+            position: relative;
+            background: linear-gradient(145deg, #fdf6f0 0%, #f9efe6 100%);
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .product-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.4s ease;
+            display: block;
+        }
+
+        .product-card:hover .product-card-image img {
+            transform: scale(1.04);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.3rem 0.85rem;
+            border-radius: 100px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .badge-digital {
+            background: rgba(212, 165, 116, 0.15);
+            color: #b8834c;
+            border: 1px solid rgba(212, 165, 116, 0.3);
+        }
+
+        .badge-physical {
+            background: rgba(80, 130, 100, 0.1);
+            color: #3d7a5a;
+            border: 1px solid rgba(80, 130, 100, 0.25);
+        }
+
+        .badge-both {
+            background: rgba(100, 100, 180, 0.1);
+            color: #4a4aaa;
+            border: 1px solid rgba(100, 100, 180, 0.2);
+        }
+
+        .product-card-body {
+            padding: 1.75rem 1.75rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-card-title {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #2a1a14;
+            line-height: 1.35;
+            margin-bottom: 0.6rem;
+        }
+
+        .product-card-hook {
+            font-size: 0.9rem;
+            color: #7a6a62;
+            line-height: 1.65;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .product-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .product-price {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #2a1a14;
+            letter-spacing: -0.01em;
+        }
+
+        .product-price.free {
+            color: #3d7a5a;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .product-cta {
+            padding: 0.65rem 1.4rem;
+            border-radius: 100px;
+            background: #2a1a14;
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.25s ease, transform 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .product-cta:hover {
+            background: #d4a574;
+            transform: scale(1.03);
+        }
+
+        .product-cta.primary {
+            background: #d4a574;
+        }
+
+        .product-cta.primary:hover {
+            background: #c49463;
+        }
+
+        /* ===== FEATURED BANNER ===== */
+        .shop-featured-banner {
+            background: linear-gradient(135deg, #2a1a14 0%, #3d2a20 100%);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .shop-featured-banner p {
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #d4a574;
+            margin-bottom: 1rem;
+        }
+
+        .shop-featured-banner h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .shop-featured-banner span {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            display: block;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* ===== MODAL ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(30, 15, 8, 0.6);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #fffaf7;
+            border-radius: 20px;
+            padding: 3.5rem 3rem;
+            max-width: 440px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 30px 80px rgba(30, 15, 8, 0.25);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #7a6a62;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+        }
+
+        .modal-close:hover { color: #2a1a14; }
+
+        .modal-icon {
+            font-size: 2rem;
+            color: #d4a574;
+            display: block;
+            margin-bottom: 1.25rem;
+        }
+
+        .modal-title {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: #2a1a14;
+            margin-bottom: 0.75rem;
+        }
+
+        .modal-text {
+            font-size: 0.975rem;
+            color: #7a6a62;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .modal-btn {
+            display: inline-block;
+            padding: 0.85rem 2.5rem;
+            background: #d4a574;
+            color: #fff;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            transition: background 0.25s ease;
+        }
+
+        .modal-btn:hover { background: #c49463; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .products-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        }
+
+        @media (max-width: 640px) {
+            .shop-hero { padding: 5.5rem 1.5rem 3rem; }
+            .shop-section { padding: 0 1.25rem 4rem; }
+            .products-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+            .product-card-body { padding: 1.5rem 1.5rem 1.25rem; }
+        }
+
+        /* ===== AFFILIATE PAGES ===== */
+        .aff-tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; padding: 0 1.5rem 2rem; }
+        .aff-tab { padding: .6rem 1.4rem; border: 1px solid rgba(212,165,116,.5); border-radius: 999px; color: #b8865a; text-decoration: none; font-size: .9rem; letter-spacing: .03em; transition: all .25s; background: #fff; }
+        .aff-tab:hover { background: rgba(212,165,116,.1); }
+        .aff-tab.active { background: #d4a574; border-color: #d4a574; color: #fff; }
+        .aff-disclosure { max-width: 760px; margin: 0 auto 3rem; padding: 0 1.5rem; text-align: center; font-size: .82rem; color: #8a7a72; line-height: 1.6; font-style: italic; }
+        .aff-category { margin-bottom: 4rem; }
+        .aff-category-title { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.5rem, 3vw, 1.9rem); font-weight: 400; color: #2a1a14; text-align: center; margin-bottom: .5rem; }
+        .aff-category-sub { text-align: center; color: #8a7a72; margin-bottom: 2rem; font-size: .95rem; }
+        .aff-card-note { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: #d4a574; margin-bottom: .4rem; }
+        .aff-empty { text-align: center; padding: 3rem 2rem; background: #fff; border: 1px dashed rgba(212,165,116,.45); border-radius: 16px; color: #7a6a62; }
+        .aff-empty h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 1.4rem; color: #2a1a14; margin-bottom: .5rem; }
+        .product-card-image img.aff-placeholder { object-fit: contain; padding: 2rem; opacity: .5; }
+    </style>
+</head>
+<body class="page page-shop">
+    <nav class="marisol-navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link">Home</a></li>
+                <li><a href="/products.html" class="nav-link">Shop</a></li>
+                <li><a href="/apparel-consulting.html" class="nav-link">Business Services</a></li>
+                <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                <li><a href="/about.html" class="nav-link">About</a></li>
+                <li><a href="/blogs.html" class="nav-link">Blogs</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="shop-hero">
+        <p class="shop-hero-eyebrow">Marisol&#8217;s Favorite Finds</p>
+        <h1>Boss Babe Essentials</h1>
+        <p>The tools, tech, and everyday essentials that help me run my businesses with intention, focus, and style.</p>
+    </header>
+
+    <nav class="aff-tabs" aria-label="Favorite finds">
+        <a href="/goddess-favorites.html" class="aff-tab">Goddess Favorites</a>
+        <a href="/boss-babe-essentials.html" class="aff-tab active">Boss Babe Essentials</a>
+        <a href="/marisols-must-haves.html" class="aff-tab">Marisol&#8217;s Must-Haves</a>
+    </nav>
+
+    <p class="aff-disclosure">This page contains affiliate links. If you make a purchase through these links, I may earn a small commission at no extra cost to you. I only share products I truly love and use. Thank you for supporting my small businesses! &#129293;</p>
+
+    <main class="shop-section" id="affContent"></main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <a href="/index.html" class="footer-link">Home</a>
+                <a href="/contact.html" class="footer-link">Contact</a>
+                <a href="/about.html" class="footer-link">About</a>
+                <a href="/blogs.html" class="footer-link">Blogs</a>
+            </nav>
+            <p class="footer-copyright">© Marisol All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        /* =========================================================
+           PRODUCTS: add one line per product.
+           category: one of the category ids below
+           name, note (why I love it), image (path or URL), link (affiliate URL), price (optional)
+           ========================================================= */
+        const CATEGORIES = [
+    {
+        "id": "workspace",
+        "title": "Workspace &amp; Desk",
+        "sub": "Pieces that make my workspace feel inspiring and organized."
+    },
+    {
+        "id": "tech",
+        "title": "Tech &amp; Tools",
+        "sub": "The gadgets and apps that keep my businesses running."
+    },
+    {
+        "id": "planning",
+        "title": "Planning &amp; Productivity",
+        "sub": "Planners, notebooks, and systems that keep me on track."
+    },
+    {
+        "id": "business-books",
+        "title": "Business Books",
+        "sub": "Books that helped me grow as an entrepreneur."
+    }
+];
+
+        const PRODUCTS = [
+            // { category: "workspace", name: "Product name", note: "Why I love it", image: "/assets/images/affiliate/product.jpg", link: "https://your-affiliate-link", price: "$29" },
+        ];
+
+        (function render() {
+            const root = document.getElementById('affContent');
+            const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]);
+            if (!PRODUCTS.length) {
+                root.innerHTML = '<div class="aff-empty"><h3>My favorites are coming soon &#10024;</h3><p>I&#8217;m curating my favorite finds for you. Check back soon!</p></div>';
+                return;
+            }
+            root.innerHTML = CATEGORIES.map(cat => {
+                const items = PRODUCTS.filter(p => p.category === cat.id);
+                if (!items.length) return '';
+                return '<section class="aff-category"><h2 class="aff-category-title">' + cat.title + '</h2>' +
+                    '<p class="aff-category-sub">' + cat.sub + '</p><div class="products-grid">' +
+                    items.map(p => '<div class="product-card">' +
+                        '<div class="product-card-image">' + (p.image ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy">' : '') + '</div>' +
+                        '<div class="product-card-body"><h3 class="product-card-title">' + esc(p.name) + '</h3>' +
+                        '<p class="product-card-hook">' + esc(p.note) + '</p>' +
+                        '<div class="product-card-footer"><span class="product-price">' + esc(p.price || '') + '</span>' +
+                        '<a href="' + esc(p.link) + '" target="_blank" rel="sponsored nofollow noopener" class="product-cta primary">Shop Now</a></div></div></div>'
+                    ).join('') + '</div></section>';
+            }).join('');
+        })();
+
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', () => { hamburger.classList.toggle('active'); navMenu.classList.toggle('active'); });
+        }
+    </script>
+</body>
+</html>
