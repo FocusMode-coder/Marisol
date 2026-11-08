@@ -773,6 +773,119 @@
             color: #d4a574;
             margin-bottom: 1rem;
         }
+
+        /* ---------- Coaching sales section ---------- */
+        .coach-hero-section { padding: 3.5rem 3rem; }
+        .coach-eyebrow {
+            display: inline-block;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #d4a574;
+            margin-bottom: 1rem;
+        }
+        .gst-section .coach-headline {
+            font-size: clamp(2rem, 4vw, 2.6rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        .gst-section .coach-lead {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #3a3a3a;
+        }
+        .gst-section .coach-truth {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #b8865a;
+            border-left: 3px solid #d4a574;
+            padding: 0.25rem 0 0.25rem 1.25rem;
+            margin: 2rem 0;
+            line-height: 1.6;
+        }
+        .coach-subhead {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.45rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin: 2.5rem 0 1.25rem;
+        }
+        .coach-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem;
+        }
+        .coach-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.9rem;
+            color: #4a4a4a;
+            line-height: 1.7;
+        }
+        .coach-list li::before {
+            content: "\2726";
+            position: absolute;
+            left: 0;
+            color: #d4a574;
+        }
+        .coach-pillars {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .coach-pillar {
+            background: #fdf8f3;
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            border-radius: 12px;
+            padding: 1.25rem 1.25rem 1rem;
+        }
+        .coach-pillar h4 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 0.4rem;
+        }
+        .gst-section .coach-pillar p {
+            font-size: 0.93rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        .coach-cta-box {
+            margin-top: 2.5rem;
+            padding: 2.25rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #3a2318 0%, #241510 100%);
+            border-radius: 14px;
+        }
+        .gst-section .coach-cta-box h3 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+        }
+        .gst-section .coach-cta-box p {
+            color: rgba(255, 255, 255, 0.82);
+            margin-bottom: 1.5rem;
+        }
+        .gst-form-group input[type="tel"] {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid rgba(218, 165, 152, 0.3);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: #ffffff;
+            box-sizing: border-box;
+        }
+        @media (max-width: 768px) {
+            .coach-hero-section { padding: 2.25rem 1.5rem; }
+            .coach-pillars { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body class="gst-page">
@@ -805,16 +918,119 @@
     <main class="gst-container">
         <a href="/goddess-spark-tribe.html" class="gst-back">&larr; Back to The Goddess Spark Tribe</a>
 
-        <section class="gst-section">
-            <span class="gst-coming-soon">Coming soon</span>
-            <h2>Coaching with Marisol</h2>
-            <p>One-on-one support for the woman who is ready to heal from old beliefs, reconnect with herself, and lead her life with intention, alignment, and power. Coaching details are coming soon.</p>
+        <!-- Coaching with Marisol -->
+        <section class="gst-section coach-hero-section">
+            <span class="coach-eyebrow">Coaching with Marisol</span>
+            <h2 class="coach-headline">You weren&#8217;t made to live a small, safe, half-awake life.</h2>
+            <p class="coach-lead">You can feel it. There&#8217;s a version of you waiting on the other side of the old beliefs, the overthinking, and the patterns you keep repeating. She&#8217;s confident. She&#8217;s at peace. She knows her worth and doesn&#8217;t apologize for wanting more.</p>
+            <p class="coach-lead">Coaching is where we stop waiting for &#8220;someday&#8221; and start becoming her &mdash; together.</p>
+
+            <p class="coach-truth">Nothing changes until you decide that you are worth the change.</p>
+
+            <h3 class="coach-subhead">This is for you if&hellip;</h3>
+            <ul class="coach-list">
+                <li>You&#8217;re tired of knowing what you <em>should</em> do and still feeling stuck.</li>
+                <li>Old wounds, limiting beliefs, or other people&#8217;s opinions are still running your life.</li>
+                <li>You want relationships that feel safe, honest, and aligned &mdash; starting with the one you have with yourself.</li>
+                <li>You&#8217;re ready to deepen your faith and trust the path you&#8217;re on.</li>
+                <li>You&#8217;re done shrinking, and you&#8217;re ready to take up space and lead your life with intention.</li>
+            </ul>
+
+            <h3 class="coach-subhead">What we&#8217;ll work on together</h3>
+            <div class="coach-pillars">
+                <div class="coach-pillar">
+                    <h4>Healing &amp; Release</h4>
+                    <p>Let go of the beliefs, stories, and pain that have been holding you back.</p>
+                </div>
+                <div class="coach-pillar">
+                    <h4>Mindset &amp; Confidence</h4>
+                    <p>Rewire the way you see yourself so you can show up with confidence and clarity.</p>
+                </div>
+                <div class="coach-pillar">
+                    <h4>Faith &amp; Purpose</h4>
+                    <p>Reconnect with your spirit, your calling, and the bigger vision for your life.</p>
+                </div>
+                <div class="coach-pillar">
+                    <h4>Relationships &amp; Wellness</h4>
+                    <p>Build healthy boundaries, aligned connections, and daily habits that nurture you.</p>
+                </div>
+            </div>
+
+            <h3 class="coach-subhead">Imagine six months from now&hellip;</h3>
+            <ul class="coach-list">
+                <li>Waking up with peace instead of anxiety.</li>
+                <li>Trusting yourself and your decisions.</li>
+                <li>Feeling at home in your body, your faith, and your relationships.</li>
+                <li>Finally living the life you&#8217;ve been praying for &mdash; on purpose.</li>
+            </ul>
+
+            <div class="coach-cta-box">
+                <h3>Your next chapter starts with one decision.</h3>
+                <p>If your soul said &#8220;yes&#8221; while reading this, listen to it.</p>
+                <a href="#inquiry" class="gst-btn">I&#8217;m Ready &mdash; Apply for Coaching</a>
+            </div>
         </section>
 
-        <section class="gst-section" style="text-align:center;">
-            <h2>Join the Tribe</h2>
-            <p>Be the first to hear about new episodes, coaching, and courses.</p>
-            <a href="/goddess-spark-tribe.html#join" class="gst-btn">Join the Tribe</a>
+        <!-- Coaching Inquiry -->
+        <section class="gst-section" id="inquiry">
+            <h2>Apply to Coach with Marisol</h2>
+            <p>Tell me a little about you and where you are right now. I&#8217;ll personally review your inquiry and reach out with next steps.</p>
+
+            <form id="coaching-form" onsubmit="handleCoachingSubmit(event)">
+                <div class="gst-form-group">
+                    <label for="c-name">Full Name</label>
+                    <input type="text" id="c-name" name="name" required>
+                </div>
+
+                <div class="gst-form-group">
+                    <label for="c-email">Email Address</label>
+                    <input type="email" id="c-email" name="email" required>
+                </div>
+
+                <div class="gst-form-group">
+                    <label for="c-phone">Phone (optional)</label>
+                    <input type="tel" id="c-phone" name="phone">
+                </div>
+
+                <div class="gst-form-group">
+                    <label for="c-focus">What would you most like support with?</label>
+                    <select id="c-focus" name="focus" required>
+                        <option value="">Select one...</option>
+                        <option value="healing">Healing &amp; letting go of the past</option>
+                        <option value="mindset">Mindset &amp; confidence</option>
+                        <option value="faith">Faith &amp; purpose</option>
+                        <option value="relationships">Relationships &amp; boundaries</option>
+                        <option value="wellness">Wellness &amp; self-care</option>
+                        <option value="not-sure">I&#8217;m not sure yet &mdash; I just know I&#8217;m ready</option>
+                    </select>
+                </div>
+
+                <div class="gst-form-group">
+                    <label for="c-now">Where are you right now, and what&#8217;s holding you back?</label>
+                    <textarea id="c-now" name="current" rows="4" required></textarea>
+                </div>
+
+                <div class="gst-form-group">
+                    <label for="c-vision">What would your life look like if coaching worked?</label>
+                    <textarea id="c-vision" name="vision" rows="4"></textarea>
+                </div>
+
+                <div class="gst-form-group">
+                    <label for="c-contact">Best way to reach you</label>
+                    <select id="c-contact" name="contact">
+                        <option value="email">Email</option>
+                        <option value="phone">Phone call</option>
+                        <option value="text">Text message</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="gst-btn" style="width: 100%;">Submit My Inquiry</button>
+            </form>
+
+            <div id="coaching-success" class="gst-success" style="display:none;">
+                <h3>Thank you, beautiful soul.</h3>
+                <p>Your inquiry has been received. I&#8217;ll review it personally and reach out soon with next steps. xoxo, Marisol</p>
+            </div>
         </section>
 
     </main>
@@ -857,6 +1073,14 @@
             document.getElementById('tribe-form').style.display = 'none';
             document.getElementById('success-message').style.display = 'block';
             document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        // Coaching inquiry handler
+        function handleCoachingSubmit(event) {
+            event.preventDefault();
+            document.getElementById('coaching-form').style.display = 'none';
+            const ok = document.getElementById('coaching-success');
+            ok.style.display = 'block';
+            ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     </script>
 
