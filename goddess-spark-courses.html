@@ -773,6 +773,279 @@
             color: #d4a574;
             margin-bottom: 1rem;
         }
+        /* ===== PRODUCT CARD ===== */
+        .product-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(60, 30, 10, 0.06);
+            border: 1px solid rgba(212, 165, 116, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(212, 165, 116, 0.2);
+        }
+
+        .product-card-image {
+            position: relative;
+            background: linear-gradient(145deg, #fdf6f0 0%, #f9efe6 100%);
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .product-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.4s ease;
+            display: block;
+        }
+
+        .product-card:hover .product-card-image img {
+            transform: scale(1.04);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.3rem 0.85rem;
+            border-radius: 100px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .badge-digital {
+            background: rgba(212, 165, 116, 0.15);
+            color: #b8834c;
+            border: 1px solid rgba(212, 165, 116, 0.3);
+        }
+
+        .badge-physical {
+            background: rgba(80, 130, 100, 0.1);
+            color: #3d7a5a;
+            border: 1px solid rgba(80, 130, 100, 0.25);
+        }
+
+        .badge-both {
+            background: rgba(100, 100, 180, 0.1);
+            color: #4a4aaa;
+            border: 1px solid rgba(100, 100, 180, 0.2);
+        }
+
+        .product-card-body {
+            padding: 1.75rem 1.75rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-card-title {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #2a1a14;
+            line-height: 1.35;
+            margin-bottom: 0.6rem;
+        }
+
+        .product-card-hook {
+            font-size: 0.9rem;
+            color: #7a6a62;
+            line-height: 1.65;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .product-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .product-price {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #2a1a14;
+            letter-spacing: -0.01em;
+        }
+
+        .product-price.free {
+            color: #3d7a5a;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .product-cta {
+            padding: 0.65rem 1.4rem;
+            border-radius: 100px;
+            background: #2a1a14;
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.25s ease, transform 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .product-cta:hover {
+            background: #d4a574;
+            transform: scale(1.03);
+        }
+
+        .product-cta.primary {
+            background: #d4a574;
+        }
+
+        .product-cta.primary:hover {
+            background: #c49463;
+        }
+
+        /* ===== FEATURED BANNER ===== */
+        .shop-featured-banner {
+            background: linear-gradient(135deg, #2a1a14 0%, #3d2a20 100%);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .shop-featured-banner p {
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #d4a574;
+            margin-bottom: 1rem;
+        }
+
+        .shop-featured-banner h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .shop-featured-banner span {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            display: block;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* ===== MODAL ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(30, 15, 8, 0.6);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #fffaf7;
+            border-radius: 20px;
+            padding: 3.5rem 3rem;
+            max-width: 440px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 30px 80px rgba(30, 15, 8, 0.25);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #7a6a62;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+        }
+
+        .modal-close:hover { color: #2a1a14; }
+
+        .modal-icon {
+            font-size: 2rem;
+            color: #d4a574;
+            display: block;
+            margin-bottom: 1.25rem;
+        }
+
+        .modal-title {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: #2a1a14;
+            margin-bottom: 0.75rem;
+        }
+
+        .modal-text {
+            font-size: 0.975rem;
+            color: #7a6a62;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .modal-btn {
+            display: inline-block;
+            padding: 0.85rem 2.5rem;
+            background: #d4a574;
+            color: #fff;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            transition: background 0.25s ease;
+        }
+
+        .modal-btn:hover { background: #c49463; }
+
+        /* ===== COURSES GRID (Goddess Spark) ===== */
+        .gst-courses-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.75rem;
+            margin-top: 1rem;
+        }
+        @media (max-width: 640px) {
+            .gst-courses-grid { grid-template-columns: 1fr; }
+            .product-card-body { padding: 1.5rem 1.5rem 1.25rem; }
+        }
     </style>
 </head>
 <body class="gst-page">
@@ -805,10 +1078,75 @@
     <main class="gst-container">
         <a href="/goddess-spark-tribe.html" class="gst-back">&larr; Back to The Goddess Spark Tribe</a>
 
+        <!-- Courses & Programs -->
         <section class="gst-section">
-            <span class="gst-coming-soon">Coming soon</span>
-            <h2>Courses</h2>
-            <p>Guided courses to help you grow at your own pace, with practical tools for your mindset, faith, relationships, and healing. Courses are coming soon.</p>
+            <h2>Courses &amp; Programs</h2>
+            <p>Guided courses and programs to help you grow at your own pace, with practical tools for your mindset, faith, relationships, and healing.</p>
+            <div class="gst-courses-grid">
+                <!-- The Key to Relationships Course -->
+                <div class="product-card" data-category="digital" onclick="openModal()">
+                    <div class="product-card-image">
+                        <span class="product-badge badge-digital">Digital</span>
+                        <img src="/assets/images/products/love-course-cover.jpg" alt="The Key to Relationships Course" loading="eager">
+                    </div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">The Key to Relationships Course</h3>
+                        <p class="product-card-hook">The Science & Sacred Maintenance of Love to make your relationships to self, spouse, family and friends stronger.</p>
+                        <div class="product-card-footer">
+                            <span class="product-price">$14.99</span>
+                            <button class="product-cta primary" onclick="openModal(); event.stopPropagation();">Get it now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radiant Life Course -->
+                <div class="product-card" data-category="digital" onclick="openModal()">
+                    <div class="product-card-image">
+                        <span class="product-badge badge-digital">Digital</span>
+                        <img src="/assets/images/products/radiant-life-course-cover.png" alt="Radiant Life Course" loading="lazy">
+                    </div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">Radiant Life Course</h3>
+                        <p class="product-card-hook">A timeless guide to ignite your inner spark and reclaim your power. Written for the woman who is ready to rise.</p>
+                        <div class="product-card-footer">
+                            <span class="product-price">$14.99</span>
+                            <button class="product-cta primary" onclick="openModal(); event.stopPropagation();">Get it now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spark the Goddess in You -->
+                <div class="product-card" data-category="physical" onclick="openModal()">
+                    <div class="product-card-image">
+                        <span class="product-badge badge-both">Digital + Physical</span>
+                        <img src="/assets/images/goddess-spark-tribe-covers/SPARKIN (3D).png" alt="Spark the Goddess in You" loading="lazy">
+                    </div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">Spark the Goddess in You</h3>
+                        <p class="product-card-hook">A comprehensive self-development program to empower yourself and transform your life.</p>
+                        <div class="product-card-footer">
+                            <span class="product-price">$19.99</span>
+                            <button class="product-cta primary" onclick="openModal(); event.stopPropagation();">Get it now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divine Goddess Workbook -->
+                <div class="product-card" data-category="digital">
+                    <div class="product-card-image">
+                        <span class="product-badge badge-digital">FREE</span>
+                        <img src="/assets/images/products/divine-goddess-workbook-cover.png" alt="Divine Goddess Workbook" loading="lazy">
+                    </div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-title">Divine Goddess Workbook</h3>
+                        <p class="product-card-hook">A comprehensive healing and self-development program. Journaling, identity work, and embodiment practices to awaken your divine self.</p>
+                        <div class="product-card-footer">
+                            <span class="product-price" style="color:#3d7a5a; font-size:1rem; font-family:inherit; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;">Free</span>
+                            <a href="/assets/downloads/DivineGoddess_Workbook.pdf" download class="product-cta primary">Download Free</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="gst-section" style="text-align:center;">
@@ -818,6 +1156,17 @@
         </section>
 
     </main>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+            <span class="modal-icon">✦</span>
+            <h2 class="modal-title">Checkout Launching Soon</h2>
+            <p class="modal-text">We're putting the finishing touches on our checkout experience. Join the waitlist to be first to know when products launch.</p>
+            <a href="/contact.html" class="modal-btn">Join Waitlist</a>
+        </div>
+    </div>
 
     <!-- Footer (unchanged) -->
     <footer class="site-footer">
@@ -858,6 +1207,15 @@
             document.getElementById('success-message').style.display = 'block';
             document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
+        function openModal() {
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
     </script>
 
 </body>
