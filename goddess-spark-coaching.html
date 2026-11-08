@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching | The Goddess Spark Tribe | Marisol</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/assets/styles/site.css">
+    <style>
+        /* ========================================
+           SCOPED STYLES FOR GODDESS SPARK TRIBE PAGE ONLY
+           ======================================== */
+        
+        /* Page wrapper */
+        .gst-page {
+            background: #fafafa;
+            min-height: 100vh;
+        }
+        
+        /* Hero section */
+        .gst-hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .gst-hero h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            color: #2a2a2a;
+            line-height: 1.2;
+        }
+        
+        .gst-hero p {
+            font-size: 1.2rem;
+            color: #5a5a5a;
+            line-height: 1.7;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        
+        /* Main content container */
+        .gst-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 2rem 6rem;
+        }
+        
+        /* Card sections */
+        .gst-section {
+            background: #ffffff;
+            border: 1px solid rgba(218, 165, 152, 0.15);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .gst-section:hover {
+            box-shadow: 0 4px 16px rgba(212, 165, 116, 0.12);
+        }
+        
+        /* Section titles */
+        .gst-section h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: #2a2a2a;
+            line-height: 1.3;
+        }
+        
+        .gst-section p {
+            color: #5a5a5a;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+        
+        /* YouTube Player Section */
+        .gst-player-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            background: #f5f5f5;
+        }
+        
+        .gst-player-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+        
+        /* Premium Button Styles */
+        .gst-btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background: #d4a574;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .gst-btn:hover {
+            background: #c49463;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+        }
+        
+        .gst-btn-secondary {
+            background: transparent;
+            color: #d4a574;
+            border: 1px solid #d4a574;
+        }
+        
+        .gst-btn-secondary:hover {
+            background: rgba(212, 165, 116, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .gst-btn-center {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+        }
+        
+        /* Episode List */
+        .gst-episodes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .gst-episode-card {
+            padding: 1.5rem;
+            background: #fafafa;
+            border: 1px solid rgba(218, 165, 152, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .gst-episode-card:hover {
+            background: #ffffff;
+            border-color: rgba(218, 165, 152, 0.25);
+            box-shadow: 0 2px 8px rgba(212, 165, 116, 0.08);
+        }
+        
+        .gst-episode-card h3 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.35rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+        
+        .gst-episode-card p {
+            color: #5a5a5a;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .gst-episode-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .gst-episode-duration {
+            font-size: 0.875rem;
+            color: #8a8a8a;
+            font-weight: 500;
+        }
+        
+        .gst-episode-link {
+            color: #d4a574;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .gst-episode-link:hover {
+            color: #c49463;
+            text-decoration: underline;
+        }
+        
+        /* Form Styles */
+        .gst-form-group {
+            margin-bottom: 1.75rem;
+        }
+        
+        .gst-form-group label {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #2a2a2a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .gst-form-group input[type="text"],
+        .gst-form-group input[type="email"],
+        .gst-form-group select,
+        .gst-form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid rgba(218, 165, 152, 0.2);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            color: #2a2a2a;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
+        
+        .gst-form-group input:focus,
+        .gst-form-group select:focus,
+        .gst-form-group textarea:focus {
+            outline: none;
+            border-color: #d4a574;
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+        }
+        
+        .gst-form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .gst-checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+        
+        .gst-checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .gst-checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #d4a574;
+        }
+        
+        .gst-checkbox-item label {
+            margin-bottom: 0;
+            cursor: pointer;
+            font-weight: 400;
+        }
+        
+        /* Success message */
+        .gst-success {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.08), rgba(218, 165, 152, 0.08));
+            border-radius: 12px;
+            border: 1px solid rgba(212, 165, 116, 0.2);
+        }
+        
+        .gst-success h3 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.75rem;
+            color: #2a2a2a;
+            margin-bottom: 1rem;
+        }
+        
+        .gst-success p {
+            color: #5a5a5a;
+            line-height: 1.7;
+        }
+        
+        /* Offerings Grid */
+        .gst-offerings-grid {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .gst-offering-card {
+            padding: 2rem;
+            background: #fafafa;
+            border: 1px solid rgba(218, 165, 152, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .gst-offering-card:hover {
+            background: #ffffff;
+            border-color: rgba(218, 165, 152, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(212, 165, 116, 0.12);
+        }
+        
+        .gst-offering-card h3 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .gst-offering-card p {
+            color: #5a5a5a;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Pricing Cards */
+        .gst-pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .gst-pricing-card {
+            background: #ffffff;
+            border: 1px solid rgba(218, 165, 152, 0.18);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .gst-pricing-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(212, 165, 116, 0.16);
+            border-color: rgba(212, 165, 116, 0.35);
+        }
+
+        .gst-pricing-card--featured {
+            background: linear-gradient(160deg, #2a1a14 0%, #3d2218 100%);
+            border-color: #d4a574;
+        }
+
+        .gst-pricing-card--featured .gst-pricing-name,
+        .gst-pricing-card--featured .gst-pricing-price,
+        .gst-pricing-card--featured .gst-pricing-desc,
+        .gst-pricing-card--featured .gst-pricing-feature {
+            color: #faf8f6;
+        }
+
+        .gst-pricing-card--featured .gst-pricing-price {
+            color: #d4a574;
+        }
+
+        .gst-pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #d4a574;
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .gst-pricing-name {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.35rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .gst-pricing-price {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2.75rem;
+            font-weight: 400;
+            color: #d4a574;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .gst-pricing-period {
+            font-size: 0.875rem;
+            color: #8a8a8a;
+            margin-bottom: 1.5rem;
+        }
+
+        .gst-pricing-card--featured .gst-pricing-period {
+            color: rgba(250, 248, 246, 0.6);
+        }
+
+        .gst-pricing-divider {
+            border: none;
+            border-top: 1px solid rgba(218, 165, 152, 0.2);
+            margin: 1.5rem 0;
+        }
+
+        .gst-pricing-card--featured .gst-pricing-divider {
+            border-color: rgba(212, 165, 116, 0.3);
+        }
+
+        .gst-pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .gst-pricing-feature {
+            font-size: 0.95rem;
+            color: #5a5a5a;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .gst-pricing-feature::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #d4a574;
+            font-size: 0.7rem;
+            top: 0.55rem;
+        }
+
+        .gst-pricing-desc {
+            font-size: 0.95rem;
+            color: #5a5a5a;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Digital Products Grid */
+        .gst-products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .gst-product-card {
+            background: linear-gradient(135deg, #faf7f3 0%, #f5ede4 100%);
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            border-radius: 14px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .gst-product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(212, 165, 116, 0.15);
+            border-color: rgba(212, 165, 116, 0.35);
+        }
+
+        .gst-product-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .gst-product-name {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .gst-product-desc {
+            font-size: 0.95rem;
+            color: #5a5a5a;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .gst-product-price {
+            font-size: 1.5rem;
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #d4a574;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .gst-pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .gst-products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gst-hero {
+                padding: 6rem 1.5rem 3rem;
+            }
+
+            .gst-container {
+                padding: 1.5rem 1.5rem 4rem;
+            }
+
+            .gst-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .gst-hero h1 {
+                font-size: 2rem;
+            }
+
+            .gst-hero p {
+                font-size: 1.05rem;
+            }
+
+            .gst-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .gst-episode-meta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* ── Podcast Player ── */
+        .podcast-player-wrap {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            background: #fffaf7;
+            border: 1px solid rgba(212,165,116,0.18);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .vinyl-wrap {
+            position: relative;
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+        }
+
+        .vinyl {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+        }
+
+        .vinyl.spinning {
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+
+        .vinyl-needle {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            width: 3px;
+            height: 60px;
+            background: linear-gradient(to bottom, #d4a574, #8b5e3c);
+            border-radius: 2px;
+            transform-origin: top center;
+            transform: rotate(28deg);
+        }
+
+        .podcast-info {
+            flex: 1;
+        }
+
+        .podcast-ep-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #d4a574;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .podcast-ep-title {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #2a1a14;
+            margin-bottom: 0.75rem;
+        }
+
+        .podcast-ep-desc {
+            font-size: 0.95rem;
+            color: #6a5a52;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .podcast-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .podcast-play-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4a574, #c08060);
+            border: none;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 14px rgba(212,165,116,0.4);
+        }
+
+        .podcast-play-btn:hover { transform: scale(1.08); }
+
+        .podcast-progress-wrap {
+            flex: 1;
+        }
+
+        .podcast-progress {
+            width: 100%;
+            -webkit-appearance: none;
+            height: 4px;
+            border-radius: 2px;
+            background: rgba(212,165,116,0.25);
+            outline: none;
+            cursor: pointer;
+        }
+
+        .podcast-progress::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #d4a574;
+            cursor: pointer;
+        }
+
+        .podcast-time {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            color: #9a8a82;
+            margin-top: 0.4rem;
+        }
+
+        @media (max-width: 640px) {
+            .podcast-player-wrap { flex-direction: column; text-align: center; }
+            .podcast-controls { justify-content: center; }
+        }
+
+        /* ---------- Page intro ---------- */
+        .gst-intro p {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #4a4a4a;
+            margin-bottom: 0;
+        }
+        .gst-intro .gst-eyebrow {
+            font-family: inherit;
+            font-size: 0.8rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #d4a574;
+            margin-bottom: 1rem;
+        }
+
+        /* ---------- Services grid ---------- */
+        .gst-services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+        .gst-service-card {
+            display: flex;
+            flex-direction: column;
+            padding: 1.75rem 1.5rem;
+            background: #fafafa;
+            border: 1px solid rgba(218, 165, 152, 0.15);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .gst-service-card:hover {
+            background: #ffffff;
+            border-color: rgba(212, 165, 116, 0.45);
+            box-shadow: 0 4px 16px rgba(212, 165, 116, 0.15);
+            transform: translateY(-3px);
+        }
+        .gst-service-card h3 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 0.75rem;
+        }
+        .gst-section .gst-service-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            flex: 1;
+        }
+        .gst-service-link {
+            color: #d4a574;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+        }
+        @media (max-width: 768px) {
+            .gst-services-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ---------- Sub-page back link ---------- */
+        .gst-back {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: #d4a574;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .gst-back:hover { text-decoration: underline; }
+        .gst-coming-soon {
+            display: inline-block;
+            font-size: 0.8rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #d4a574;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="gst-page">
+    <!-- Navigation (unchanged) -->
+    <nav class="marisol-navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link">Home</a></li>
+                <li><a href="/products.html" class="nav-link">Shop</a></li>
+                <li><a href="/apparel-consulting.html" class="nav-link">Business Services</a></li>
+                <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                <li><a href="/about.html" class="nav-link">About</a></li>
+                <li><a href="/blogs.html" class="nav-link">Blogs</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="gst-hero">
+        <h1>Coaching</h1>
+        <p>Personalized one-on-one guidance to help you heal, grow, and step into your power.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="gst-container">
+        <a href="/goddess-spark-tribe.html" class="gst-back">&larr; Back to The Goddess Spark Tribe</a>
+
+        <section class="gst-section">
+            <span class="gst-coming-soon">Coming soon</span>
+            <h2>Coaching with Marisol</h2>
+            <p>One-on-one support for the woman who is ready to heal from old beliefs, reconnect with herself, and lead her life with intention, alignment, and power. Coaching details are coming soon.</p>
+        </section>
+
+        <section class="gst-section" style="text-align:center;">
+            <h2>Join the Tribe</h2>
+            <p>Be the first to hear about new episodes, coaching, and courses.</p>
+            <a href="/goddess-spark-tribe.html#join" class="gst-btn">Join the Tribe</a>
+        </section>
+
+    </main>
+
+    <!-- Footer (unchanged) -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <a href="/index.html" class="footer-link">Home</a>
+                <a href="/contact.html" class="footer-link">Contact</a>
+                <a href="/about.html" class="footer-link">About</a>
+                <a href="/blogs.html" class="footer-link">Blogs</a>
+            </nav>
+            <p class="footer-copyright">© Marisol All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu functionality (unchanged)
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // Form submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('tribe-form').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+            document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+
+</body>
+</html>

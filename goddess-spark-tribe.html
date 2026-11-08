@@ -694,6 +694,85 @@
             .podcast-player-wrap { flex-direction: column; text-align: center; }
             .podcast-controls { justify-content: center; }
         }
+
+        /* ---------- Page intro ---------- */
+        .gst-intro p {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #4a4a4a;
+            margin-bottom: 0;
+        }
+        .gst-intro .gst-eyebrow {
+            font-family: inherit;
+            font-size: 0.8rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #d4a574;
+            margin-bottom: 1rem;
+        }
+
+        /* ---------- Services grid ---------- */
+        .gst-services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+        .gst-service-card {
+            display: flex;
+            flex-direction: column;
+            padding: 1.75rem 1.5rem;
+            background: #fafafa;
+            border: 1px solid rgba(218, 165, 152, 0.15);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .gst-service-card:hover {
+            background: #ffffff;
+            border-color: rgba(212, 165, 116, 0.45);
+            box-shadow: 0 4px 16px rgba(212, 165, 116, 0.15);
+            transform: translateY(-3px);
+        }
+        .gst-service-card h3 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 0.75rem;
+        }
+        .gst-section .gst-service-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            flex: 1;
+        }
+        .gst-service-link {
+            color: #d4a574;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+        }
+        @media (max-width: 768px) {
+            .gst-services-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ---------- Sub-page back link ---------- */
+        .gst-back {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: #d4a574;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .gst-back:hover { text-decoration: underline; }
+        .gst-coming-soon {
+            display: inline-block;
+            font-size: 0.8rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #d4a574;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body class="gst-page">
@@ -751,101 +830,37 @@
 
     <!-- Main Content -->
     <main class="gst-container">
-        
-        <!-- Latest Episode Section with Audio Player -->
-        <section class="gst-section">
-            <h2>Latest Episode</h2>
 
-            <div class="podcast-player-wrap">
-                <!-- Spinning vinyl visual -->
-                <div class="vinyl-wrap">
-                    <div class="vinyl" id="vinylDisc">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="100" cy="100" r="100" fill="#1a100a"/>
-                            <circle cx="100" cy="100" r="85" fill="none" stroke="#2e1a10" stroke-width="1.5"/>
-                            <circle cx="100" cy="100" r="72" fill="none" stroke="#2e1a10" stroke-width="1"/>
-                            <circle cx="100" cy="100" r="59" fill="none" stroke="#2e1a10" stroke-width="1"/>
-                            <circle cx="100" cy="100" r="46" fill="none" stroke="#2e1a10" stroke-width="1"/>
-                            <circle cx="100" cy="100" r="33" fill="#d4a574"/>
-                            <circle cx="100" cy="100" r="24" fill="#c49463"/>
-                            <circle cx="100" cy="100" r="12" fill="#1a100a"/>
-                            <circle cx="100" cy="100" r="5" fill="#d4a574"/>
-                            <!-- Gold shimmer lines -->
-                            <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(212,165,116,0.12)" stroke-width="0.8"/>
-                            <circle cx="100" cy="100" r="65" fill="none" stroke="rgba(212,165,116,0.10)" stroke-width="0.8"/>
-                        </svg>
-                    </div>
-                    <div class="vinyl-needle"></div>
-                </div>
-
-                <!-- Episode info + audio controls -->
-                <div class="podcast-info">
-                    <p class="podcast-ep-label">Episode 1</p>
-                    <h3 class="podcast-ep-title">Reclaiming Your Power</h3>
-                    <p class="podcast-ep-desc">An honest conversation about stepping into alignment, healing, and becoming the woman you were always meant to be.</p>
-                    <audio id="podcastAudio" src="/assets/audio/episode-01.mp3" preload="metadata"></audio>
-                    <div class="podcast-controls">
-                        <button class="podcast-play-btn" id="playBtn" aria-label="Play / Pause">
-                            <span id="playIcon">&#9654;</span>
-                        </button>
-                        <div class="podcast-progress-wrap">
-                            <input type="range" class="podcast-progress" id="progressBar" value="0" min="0" max="100" step="0.1">
-                            <div class="podcast-time">
-                                <span id="currentTime">0:00</span>
-                                <span id="duration">--:--</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Page Intro -->
+        <section class="gst-section gst-intro">
+            <p class="gst-eyebrow">Welcome</p>
+            <p>Welcome to the podcast where real talk meets real life. Most of the time, it&#8217;ll just be me having open and honest conversations about faith, relationships, healing from old beliefs, and all the things life throws our way. Think of it like sitting down with a friend for a heart-to-heart. But every now and then, I&#8217;ll bring on some amazing guests to join the conversation. So whether it&#8217;s a solo chat or a special guest, expect authentic stories, laughs, and plenty of moments of growth.</p>
         </section>
 
-        <!-- Recent Episodes Section -->
+        <!-- Services Section -->
         <section class="gst-section">
-            <h2>Recent Episodes</h2>
-            <div class="gst-episodes-list">
-                
-                <article class="gst-episode-card">
-                    <h3>Episode 1: Reclaiming Your Power</h3>
-                    <p>Discover how to step into your authentic power and stop dimming your light for others.</p>
-                    <div class="gst-episode-meta">
-                        <span class="gst-episode-duration">28 min</span>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="gst-episode-link">Listen on YouTube →</a>
-                    </div>
-                </article>
-                
-                <article class="gst-episode-card">
-                    <h3>Episode 2: Morning Rituals That Transform</h3>
-                    <p>Learn the sacred practices that set the tone for a powerful day.</p>
-                    <div class="gst-episode-meta">
-                        <span class="gst-episode-duration">32 min</span>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="gst-episode-link">Listen on YouTube →</a>
-                    </div>
-                </article>
-
-                <article class="gst-episode-card">
-                    <h3>Episode 3: Manifesting Your Dream Life</h3>
-                    <p>The energy, mindset, and aligned action needed to create your reality.</p>
-                    <div class="gst-episode-meta">
-                        <span class="gst-episode-duration">35 min</span>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="gst-episode-link">Listen on YouTube →</a>
-                    </div>
-                </article>
-
-                <article class="gst-episode-card">
-                    <h3>Episode 4: Healing Through Self-Expression</h3>
-                    <p>Why your voice matters and how to share your truth authentically.</p>
-                    <div class="gst-episode-meta">
-                        <span class="gst-episode-duration">30 min</span>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="gst-episode-link">Listen on YouTube →</a>
-                    </div>
-                </article>
-                
+            <h2>Explore the Tribe</h2>
+            <div class="gst-services-grid">
+                <a href="/goddess-spark-coaching.html" class="gst-service-card">
+                    <h3>Coaching</h3>
+                    <p>Personalized one-on-one guidance to help you heal, grow, and step into your power.</p>
+                    <span class="gst-service-link">Learn more &rarr;</span>
+                </a>
+                <a href="/goddess-spark-courses.html" class="gst-service-card">
+                    <h3>Courses</h3>
+                    <p>Self-paced lessons and tools for mindset, faith, relationships, and healing.</p>
+                    <span class="gst-service-link">Learn more &rarr;</span>
+                </a>
+                <a href="/goddess-spark-podcast.html" class="gst-service-card">
+                    <h3>Podcast</h3>
+                    <p>Open, honest conversations about faith, relationships, healing, and real life.</p>
+                    <span class="gst-service-link">Listen now &rarr;</span>
+                </a>
             </div>
         </section>
 
         <!-- Join the Tribe Form Section -->
-        <section class="gst-section">
+        <section class="gst-section" id="join">
             <h2>Join the Tribe</h2>
             <p>Share your journey and get personalized insights to support your transformation.</p>
             
@@ -907,8 +922,6 @@
             </div>
         </section>
 
-
-
     </main>
 
     <!-- Footer (unchanged) -->
@@ -952,54 +965,5 @@
         }
     </script>
 
-    <script>
-        const audio = document.getElementById('podcastAudio');
-        const playBtn = document.getElementById('playBtn');
-        const playIcon = document.getElementById('playIcon');
-        const progressBar = document.getElementById('progressBar');
-        const currentTimeEl = document.getElementById('currentTime');
-        const durationEl = document.getElementById('duration');
-        const vinyl = document.getElementById('vinylDisc');
-
-        function fmt(s) {
-            const m = Math.floor(s / 60);
-            const sec = Math.floor(s % 60);
-            return m + ':' + (sec < 10 ? '0' : '') + sec;
-        }
-
-        audio.addEventListener('loadedmetadata', () => {
-            durationEl.textContent = fmt(audio.duration);
-        });
-
-        playBtn.addEventListener('click', () => {
-            if (audio.paused) {
-                audio.play();
-                playIcon.innerHTML = '&#10074;&#10074;';
-                vinyl.classList.add('spinning');
-            } else {
-                audio.pause();
-                playIcon.innerHTML = '&#9654;';
-                vinyl.classList.remove('spinning');
-            }
-        });
-
-        audio.addEventListener('timeupdate', () => {
-            if (audio.duration) {
-                progressBar.value = (audio.currentTime / audio.duration) * 100;
-                currentTimeEl.textContent = fmt(audio.currentTime);
-            }
-        });
-
-        progressBar.addEventListener('input', () => {
-            audio.currentTime = (progressBar.value / 100) * audio.duration;
-        });
-
-        audio.addEventListener('ended', () => {
-            playIcon.innerHTML = '&#9654;';
-            vinyl.classList.remove('spinning');
-            progressBar.value = 0;
-            currentTimeEl.textContent = '0:00';
-        });
-    </script>
 </body>
 </html>
