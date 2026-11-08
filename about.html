@@ -326,6 +326,57 @@
                 font-size: 1.2rem;
             }
         }
+
+        /* Readable story layout */
+        .about-hero .about-top-text,
+        .about-hero .about-full-text { text-align: left; }
+        .about-hero .about-full-text { max-width: 760px; margin-left: auto; margin-right: auto; }
+        /* ---------- New bio styles ---------- */
+        .about-bio-title {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(2.2rem, 4.5vw, 3rem);
+            font-weight: 400;
+            color: #2a2a2a;
+            line-height: 1.15;
+            margin: 0 0 0.6rem;
+        }
+        .about-bio-tagline {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #b8865a;
+            margin: 0 0 2rem;
+        }
+        .about-bio-p.about-bio-hello {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.4rem;
+            color: #2a2a2a;
+        }
+        .about-bio-heading {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(1.6rem, 3vw, 2rem);
+            font-weight: 400;
+            color: #2a2a2a;
+            margin: 3rem 0 1.25rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 165, 116, 0.25);
+        }
+        .about-bio-p.about-bio-highlight {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: #b8865a;
+            border-left: 3px solid #d4a574;
+            padding-left: 1.25rem;
+            margin: 2rem 0;
+            line-height: 1.6;
+        }
+        .about-bio-p.about-signature {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.5rem;
+            color: #2a2a2a;
+            margin-top: 0.25rem;
+        }
     </style>
 </head>
 <body class="page page-about">
@@ -349,35 +400,98 @@
     <main id="about-page">
         <!-- Hero Section -->
         <section class="about-hero">
-            <!-- Top: first paragraph left, photo right -->
+            <!-- Top: intro left, photo right -->
             <div class="about-top-grid">
                 <div class="about-top-text">
-                    <p class="about-bio-p">Marisol Moran is a fashion creative, mental health advocate, psychology enthusiast, and business strategist passionate about fashion, wellness, personal growth, and helping women elevate their lives.</p>
+                <h1 class="about-bio-title">A Little About Me</h1>
+                <p class="about-bio-tagline">The woman behind the vision, the heart behind the brands.</p>
 
-                    <p class="about-bio-p">As a first-generation Mexican-American college graduate, Marisol was raised with strong values rooted in ambition, humility, kindness, resilience, and hard work. She was taught to dream big, support others, and build a meaningful life while staying connected to the people she loves most. Those values became the foundation of both her personal journey and the purpose behind everything she creates.</p>
+                <p class="about-bio-p about-bio-hello">Hi, I&#8217;m Marisol. 🤍</p>
 
-                    <p class="about-bio-p">Growing up through difficult life experiences and challenges sparked a deep curiosity and passion for understanding the human mind, emotional healing, and personal transformation. That passion ultimately led her to create work centered around helping women heal, grow, and reconnect with their confidence and inner strength.</p>
+                <p class="about-bio-p">I&#8217;m a fashion creative, entrepreneur, mental health advocate, and forever student of life. I&#8217;m passionate about psychology, wellness, personal growth, and understanding what makes us who we are. But beyond all the titles, I&#8217;m simply a woman who loves deeply, dreams big, and believes that we all have the power to create a beautiful, meaningful life; even when the journey doesn&#8217;t look the way we imagined.</p>
+
+                <p class="about-bio-p">I&#8217;m a first-generation Mexican-American college graduate, raised with a deep appreciation for family, hard work, humility, kindness, and resilience. Growing up, I was taught to dream big, never forget where I came from, and always make room to lift others along the way. Those values have stayed with me through every chapter of my life.</p>
                 </div>
                 <div class="about-top-image">
                     <img src="/assets/images/bio/marisol-about.png" alt="Marisol Moran" class="about-portrait" loading="eager">
                 </div>
             </div>
 
-            <!-- Below photo: full-width remaining paragraphs -->
+            <!-- Below photo: the rest of the story -->
             <div class="about-full-text">
-                <p class="about-bio-p">Alongside her corporate fashion career and entrepreneurial businesses, Marisol felt called to create work rooted in deeper purpose to help others. This led her to create The Goddess Spark Tribe, a space dedicated to self-development, healing, empowerment, and helping women become more confident, aligned, and fulfilled in every area of life.</p>
+                <p class="about-bio-p">But like so many of us, my journey hasn&#8217;t always been easy.</p>
 
-                <p class="about-bio-p">Driven by her love for fashion and creativity, she also founded Soul Shine Collections, built on the belief that every woman deserves an essential black dress that is unique, comfortable, and effortlessly empowering. Her curated collection was designed to help women feel confident, elegant, beautiful, and radiant during life's most meaningful moments.</p>
+                <p class="about-bio-p">I&#8217;ve experienced moments that challenged my confidence, tested my strength, and made me question things I once believed about myself and the world around me. There were chapters of my life that required me to look inward, unlearn old patterns, and discover who I was beyond the expectations, fears, and experiences that had shaped me.</p>
 
-                <p class="about-bio-p">With her creative business services, Marisol helps visionaries bring their ideas and brands to life with intention, strategy, and authenticity.</p>
+                <p class="about-bio-p">And somewhere along the way, through many hardships something beautiful happened.</p>
 
-                <p class="about-bio-p">Through her brands, courses, and creative services, Marisol blends self-development, feminine empowerment, fashion, and business strategy to support women both personally and professionally in a way that feels grounded, supportive, and real.</p>
+                <p class="about-bio-p">I became deeply curious about healing, the human mind, and the incredible ways we can grow and transform when we begin to understand ourselves.</p>
 
-                <p class="about-bio-p">Everything she creates is intentional. Every detail is designed to help women let their soul shine by empowering their mind, body, and bank account so they can live in deeper alignment with themselves, their purpose, and the people they love.</p>
+                <p class="about-bio-p">That curiosity turned into a love for psychology, emotional wellness, spirituality, and self-development. Not because I have life all figured out, trust me, I don&#8217;t; but because I know how powerful it can be to understand your mind, read others, reconnect with yourself, and realize that your past doesn&#8217;t have to define your future.</p>
 
-                <div class="about-quote">
-                    "Where Style Meets Power. This is more than a brand it is a refined ecosystem for growth."
-                </div>
+                <p class="about-bio-p">I&#8217;m still learning. Still healing. Still evolving.</p>
+
+                <p class="about-bio-p">And I think that&#8217;s one of the most beautiful parts of being human.</p>
+
+                <h2 class="about-bio-heading">How My Passions Became My Purpose</h2>
+
+                <p class="about-bio-p">Fashion has always been one of my greatest loves. I&#8217;ve spent years building my career in the fashion industry, bringing creative ideas to life, and learning the business behind the beauty.</p>
+
+                <p class="about-bio-p">But I&#8217;ve always felt that my purpose extended beyond what I could create professionally with the passion for fashion.</p>
+
+                <p class="about-bio-p">I wanted to create things that made women feel something. Something that reminded them of their worth, their beauty, their strength, and the possibilities waiting for them.</p>
+
+                <p class="about-bio-p">That&#8217;s how Soul Shine Collections came to life.</p>
+
+                <p class="about-bio-p">I created the fashion brand around something I genuinely believe: every woman should have a safe, classic go-to black dress that makes her feel confident, comfortable, elegant, and completely herself. Because sometimes, the right dress isn&#8217;t just about how you look, it&#8217;s about how you feel when you walk into a room for any occasion.</p>
+
+                <p class="about-bio-p">As my own personal growth journey deepened, so did my desire to create a space where women could feel supported beyond fashion.</p>
+
+                <p class="about-bio-p">That&#8217;s what inspired The Goddess Spark Tribe.</p>
+
+                <p class="about-bio-p">A space for honest conversations, self-discovery, healing, feminine empowerment, and becoming more intentional about the lives we&#8217;re creating.</p>
+
+                <p class="about-bio-p">A space where we can talk about the things that really matter; our relationships, our beliefs, our emotional well-being, our dreams, our fears, and the parts of ourselves we&#8217;re still learning to love.</p>
+
+                <p class="about-bio-p">Not from a place of perfection, but from a place of genuine connection.</p>
+
+                <p class="about-bio-p">Because I don&#8217;t believe we have to have everything figured out to inspire, support, or learn from one another.</p>
+
+                <p class="about-bio-p">Sometimes the most meaningful thing we can offer another woman is the reminder that she&#8217;s not alone in what she&#8217;s navigating and share the tools that helped us navigate our challenges and evolve into the best version of our selves.</p>
+
+                <p class="about-bio-p">And through my creative business services, I get to bring another part of myself into the world; helping entrepreneurs, dreamers, and visionaries turn their ideas into something real through creativity, thoughtful strategy, and purposeful design.</p>
+
+                <h2 class="about-bio-heading">The Heart Behind Everything I Do</h2>
+
+                <p class="about-bio-p">If there&#8217;s one thing I&#8217;ve learned, it&#8217;s that success means so much more than what we accomplish.</p>
+
+                <p class="about-bio-p">It&#8217;s about how we feel within ourselves. The relationships we nurture. The peace we protect. The dreams we have the courage to pursue. The way we care for our minds and bodies. And the freedom to create a life that genuinely feels like our own.</p>
+
+                <p class="about-bio-p">I love beautiful things, ambitious goals, meaningful conversations, and the excitement of building something from nothing. But I also love the simple things &mdash; quality time with the people I love, moments of stillness, laughter, and those little reminders of how beautiful life can be.</p>
+
+                <p class="about-bio-p">I&#8217;m a believer in both softness and strength. In ambition and balance. In faith and taking action. In being a work in progress while still being worthy of everything beautiful life has to offer.</p>
+
+                <p class="about-bio-p">And that&#8217;s really what connects everything I create.</p>
+
+                <p class="about-bio-p about-bio-highlight">I want women to feel empowered from the inside out &mdash; in their minds, their bodies, their confidence, their creativity, and their financial independence.</p>
+
+                <p class="about-bio-p">I want us to dream bigger without losing ourselves in the process. To build meaningful lives without forgetting to enjoy them. To heal from what has hurt us while remaining open to all the beauty that&#8217;s still ahead.</p>
+
+                <p class="about-bio-p">Most of all, I want to remind women that becoming the best version of yourself isn&#8217;t about becoming someone else.</p>
+
+                <p class="about-bio-p about-bio-highlight">It&#8217;s about coming home to yourself.</p>
+
+                <p class="about-bio-p">So whether you&#8217;re here for fashion, wellness, personal growth, a little business inspiration, or simply a genuine connection, I&#8217;m so happy our paths crossed.</p>
+
+                <p class="about-bio-p">I&#8217;m not here because I have all the answers.</p>
+
+                <p class="about-bio-p">I&#8217;m here because I believe in learning, growing, creating, and figuring out this beautiful, messy thing called life together.</p>
+
+                <p class="about-bio-p about-bio-highlight">Here&#8217;s to becoming, evolving, loving deeply, dreaming boldly, and never forgetting to let our souls shine.</p>
+
+                <p class="about-bio-p">With love,</p>
+
+                <p class="about-bio-p about-signature">Marisol 🤍</p>
             </div>
         </section>
 
