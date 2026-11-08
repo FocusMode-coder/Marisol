@@ -7,6 +7,46 @@
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/assets/styles/site.css">
     <style>
+        /* Collaboration packages: 3 in one row */
+        .collab-packages {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            align-items: stretch;
+            padding-top: 0.75rem;
+        }
+        .collab-packages .card {
+            display: flex;
+            flex-direction: column;
+            padding: 1.75rem 1.4rem;
+        }
+        .collab-packages .card .btn {
+            margin-top: auto !important;
+        }
+        .collab-packages .card { position: relative; }
+        .collab-packages .badge-popular {
+            position: absolute;
+            top: -0.75rem;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0 !important;
+            background: #d4a574;
+            color: #fff;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+        .collab-packages .card:has(.badge-popular) {
+            border: 1px solid rgba(212, 165, 116, 0.6);
+        }
+        .collab-packages .card-description {
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .collab-packages { grid-template-columns: 1fr; }
+        }
         /* Collab Slideshow */
         .collab-slideshow {
             position: relative;
@@ -117,7 +157,7 @@
                 <h2 class="section-title">Collaboration Packages</h2>
                 <p class="section-subtitle">Select the package that aligns with your vision</p>
 
-                <div class="grid grid-3">
+                <div class="grid grid-3 collab-packages">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">2 Photos</h3>
